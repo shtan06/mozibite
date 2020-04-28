@@ -11,7 +11,7 @@
 
 
 
-<title>Sum of Geometric Series</title>
+<title>Creating Websites Using R</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -267,7 +267,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">My Website</a>
+      <a class="navbar-brand" href="index.html">mozibite</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -275,7 +275,7 @@ $(document).ready(function () {
   <a href="index.html">Home</a>
 </li>
 <li>
-  <a href="GeometricSum.html">Posts</a>
+  <a href="R_Blogs.html">R</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -289,65 +289,29 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Sum of Geometric Series</h1>
+<h1 class="title toc-ignore">Creating Websites Using R</h1>
 
 </div>
 
 
-<div id="sum-of-a-geometric-series" class="section level3">
-<h3>Sum of a Geometric Series</h3>
-<p>Excel’s built-in functions are useful only if you depend entirely on spreadsheets to generate financial numbers. If you already understand the common finance terms and their meanings, but want to know more about the mathematics behind it (perhaps you want write a simple financial program), it is important to realise that most calculations involving loans and bonds comes from the time value of moeny formula. Take a look at some of the financial functions available in Excel - IRR, FV, NPV, PMT, PRICE and YIELD. They are all derived from the same formula; the only difference is the input you provide as function variables required under different objectives and assumptions. It is also worth noting that where lengthy time series make computation more tedious, one of the most useful formula to apply is the geometric series formula. Most of you will recall learning it in algebra class but never had the chance to use it in real life. Blame it on computers, maybe, but We have come to be more familiar with the name of mathematical functions than the actual formula itself.</p>
-<p>A geometric progression is a sequence obtained by multiplying the preceding term by a constant, called a common ratio. The sequence [3, 6, 12, 24, 48, 96] follows a geometric progression <span class="math inline">\(a, ar, ar^2, ar^3, ar^4\)</span>. The first term , <em>a</em>, is 3 and the common ratio, <em>r</em> is 2. The number of terms, <em>n</em>, in the series is 5.</p>
-<p>The sum of the first <em>n</em> terms of a geometric progression is given by:</p>
-<p><span class="math display">\[S_n=a~+~ar~+~ar^2~+~...~+ ar^{n-1}\]</span> Notice the similarity with formulas such as the time value of multiple cash flows.</p>
-<p><span class="math inline">\(Present Value=\frac{C_1}{(1+r)^1}+\frac{C_2}{(1+r)^2}+\frac{C_3}{(1+r)^3}+...\frac{C_n}{(1+r)^n}\)</span></p>
-<p>Calculation using the expanded form can be tedious When <em>n</em> is large. Fortunately, we can use a simple formula.</p>
-<p><span class="math inline">\(S_n=a+ar+ar^2+ar^3+...+ar^{n-3}+ar^{n-2}+ar^{n-1}\)</span></p>
-<p><span class="math inline">\(S_n=a+r(a+ar+ar^2+...+ar^{n-3}+ar^{n-2})\)</span></p>
-<p><span class="math inline">\(S_n=a+r(S_n-ar^{n-1})\)</span></p>
-<p><span class="math inline">\(S_n=a+rS_n-ar^n\)</span></p>
-<p><span class="math inline">\(S_n-rS_n=a-ar^n\)</span></p>
-<p><span class="math inline">\(S_n(1-r)=a(1-r^n)\)</span></p>
-<p><span class="math display">\[S_n=\frac{a(1-r^n)}{1-r}\]</span></p>
-<p>Using this formula, we can find the present value by substituting:</p>
-<p><span class="math inline">\(S_n = PV\)</span>, <span class="math inline">\(a=\frac{C}{1+r}\)</span>, <span class="math inline">\(r=\frac{1}{1+r}\)</span>, <span class="math inline">\(n=n\)</span></p>
-<p>and we get:</p>
-<style>
-div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
-</style>
-<div class="blue">
-<p><span class="math display">\[PV=C~\frac{1-(1+r)^{-n}}{r}\]</span></p>
+<div id="r-markdown" class="section level2">
+<h2>R Markdown</h2>
+<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
+<p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</p>
+<pre class="r"><code>summary(cars)</code></pre>
+<pre><code>##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00</code></pre>
 </div>
-</div>
-<div id="periodic-payment-formula" class="section level3">
-<h3>Periodic Payment Formula</h3>
-<p>Back to the loan example shown in Section 1.1. How do you manually calculate the monthly payment? <br><br> <strong>Monthly Payment Amount</strong> <span class="math display">\[A = \frac{Pr(1+r)^n}{(1+r)^n-1}\]</span></p>
-<pre><code>      where
-             A = Periodic Payment Amount
-             P = Present Value of Loan (Initial Loan Amount)
-             r = Interest rate for each period
-             n = Number of periods</code></pre>
-<p>From the loan example:</p>
-<p>P = $200,000<br />
-r = 0.005 (6.0% p.a. divided by 12)<br />
-n = 24 (number of periods or months up to maturity)</p>
-<p><span class="math inline">\(A = \frac{200,000*0.005(1+0.005)^{24}}{(1+0.005)^{24}-1} = 8,864.12\)</span></p>
-<hr />
-<p><strong>Deriving the formula</strong></p>
-<p>Forget about the above formula for a moment. With only information on <em>p</em>, <em>r</em> and <em>n</em>, you can easily calculate the first month’s interest amount. That’s probably as far as you get with the schedule without performing any trial and error. What method might you think of to determine a series of fixed amount that spreads out the principal repayment nicely across two years, pay interest according to the monthly balance and be left owing nothing at the end?</p>
-<p>It is quite obvious to most that the present values of all monthly payments received in equal amounts must add up to the initial loan principal. This is translated into the present value formula:</p>
-<p><span class="math display">\[P=\frac{A}{(1+r)}+\frac{A}{(1+r)^2}+\frac{A}{(1+r)^3}+\frac{A}{(1+r)^4}+...\frac{A}{(1+r)^n}\]</span></p>
-<pre><code>        where
-               P = Present Value of all future payments
-               A = Constant Payment Amount
-               r = Periodic interest
-               n = Number of periods</code></pre>
-<p>In other words, we want to achieve a series of numbers like Column “O” of the payment schedule, in which the summation of all the present value interest and principal payments compensates for the initial loan principal. Since the only known variables at this point are <em>P</em>, <em>r</em> and <em>n</em>, to find <em>A</em>, we need to simplify and re-arrange the formula.</p>
-<p>From the previous section, we know that the sum of the geometric series formula is: <span class="math inline">\(S_n = \frac{a(1-r^n)}{(1-r)}\)</span>. Re-arranging it, we get <span class="math inline">\(a = \frac{S_n(1-r)}{1-r^n}\)</span></p>
-<p>From the present value formula, if <span class="math inline">\(\frac{A}{(1+r)}\)</span> represents the 1<sup>st</sup> term of the geometric series <em>a</em>, <span class="math inline">\(\frac{1}{(1+r)}\)</span> the common ratio <em>r</em>, <em>n</em> the number of terms in the series, and <em>P</em> the sum, then substituting these into <span class="math inline">\(a = \frac{S_n(1-r)}{1-r^n}\)</span>:</p>
-<p><span class="math display">\[\frac{A}{(1+r)}=\frac{P(1-\frac{1}{(1+r)})}{1-\frac{1}{(1+r)^n}}\]</span></p>
-<p><span class="math display">\[A=\frac{P(\frac{r}{(1+r)})(1+r)}{\frac{(1+r)^n-1}{(1+r)^n}}\]</span></p>
-<p><span class="math display">\[A=\frac{Pr(1+r)^n}{(1+r)^n-1}\]</span></p>
+<div id="including-plots" class="section level2">
+<h2>Including Plots</h2>
+<p>You can also embed plots, for example:</p>
+<p><img src="R_Build_Website_RStudio_files/figure-html/pressure-1.png" width="672" /></p>
+<p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
 </div>
 
 
