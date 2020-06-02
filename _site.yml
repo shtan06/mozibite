@@ -1,0 +1,11 @@
+name: "Tiny Bites Blog"
+output_dir: docs
+navbar:
+  title: "mozibite"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+    - text: "Blog"
+      href: blogs.html

@@ -1,0 +1,11 @@
+---
+title: "About"
+output: html_document
+---
+
+This site is built entirely on RStudio/R Markdown site generator in its simplest form with minimum coding, packages and themes. To learn more about R Markdown, go to: <https://rmarkdown.rstudio.com/index.html> or read the book, R Markdown: The Definitive Guide online <https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html>.
+
+Many of the posts here are based on my learning experience. I will share random stuff that I think would be useful information for you.
+
+ *"...break (the projects) down to their simplest form and then just make marginal improvements along the way to improve my odds of achieving them."*
+ - an inspiring advise from Stephen Duneier who gave a talk on TEDx on how to achieve your goals.

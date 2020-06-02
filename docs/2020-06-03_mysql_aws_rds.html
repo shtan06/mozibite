@@ -11,7 +11,7 @@
 
 
 
-<title>Creating Websites Using R</title>
+<title>Creating a MySQL DB Instance on AWS RDS</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -275,7 +275,10 @@ $(document).ready(function () {
   <a href="index.html">Home</a>
 </li>
 <li>
-  <a href="R_Blogs.html">R</a>
+  <a href="about.html">About</a>
+</li>
+<li>
+  <a href="blogs.html">Blog</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -289,30 +292,13 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Creating Websites Using R</h1>
+<h1 class="title toc-ignore">Creating a MySQL DB Instance on AWS RDS</h1>
 
 </div>
 
 
-<div id="r-markdown" class="section level2">
-<h2>R Markdown</h2>
-<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
-<p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</p>
-<pre class="r"><code>summary(cars)</code></pre>
-<pre><code>##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00</code></pre>
-</div>
-<div id="including-plots" class="section level2">
-<h2>Including Plots</h2>
-<p>You can also embed plots, for example:</p>
-<p><img src="R_Build_Website_RStudio_files/figure-html/pressure-1.png" width="672" /></p>
-<p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
-</div>
+<p>Amazon Relational Database Service’s user guide <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_GettingStarted.CreatingConnecting.MySQL.html">Creating a MySQL DB Instance and Connecting to a Database on a MySQL DB Instance</a> provides a very clear instruction for first time users.</p>
+<p>The setup is simple when configured using the <em>Easy Create</em>. The only issue I encountered after the database had been successfully created was that the MySQL Workbench installed on my machine could not connect to the new database. It was resolved after making changes to the inbound rules (in security group rules) to <strong>Type = All Traffic</strong> and <strong>Source = My IP</strong>. I’m not sure if this opens up any security risk but for now, since access is restricted to my IP only and the database is a test database, it should be fine.</p>
 
 
 

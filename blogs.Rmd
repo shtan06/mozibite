@@ -1,0 +1,7 @@
+---
+title: "BLOGS"
+output: html_document
+---
+
+[CREATING A MYSQL DB INSTANCE ON AWS RDS](2020-06-03_mysql_aws_rds.html)  
+Last updated: 3-Jun-2020

@@ -1,0 +1,12 @@
+---
+title: "Creating a MySQL DB Instance on AWS RDS"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Amazon Relational Database Service's user guide [Creating a MySQL DB Instance and Connecting to a Database on a MySQL DB Instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_GettingStarted.CreatingConnecting.MySQL.html) provides a very clear instruction for first time users. 
+
+The setup is simple when configured using the *Easy Create*. The only issue I encountered after the database had been successfully created was that the MySQL Workbench installed on my machine could not connect to the new database. It was resolved after making changes to the inbound rules (in security group rules) to **Type = All Traffic** and **Source = My IP**. I'm not sure if this opens up any security risk but for now, since access is restricted to my IP only and the database is a test database, it should be fine. 
