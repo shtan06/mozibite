@@ -1,0 +1,106 @@
+---
+title: "Get Flask Up and Running from Anaconda Navigator"
+output: html_document
+---
+
+Executing commands from your Terminal or Command Prompt is almost unavoidable in Python. Beginnners may find it difficult to make sense of what is going in this environment. You will find that many course instructors use them to perform even simple tasks like opening a file. To a learner who is following step by step for the first time, such commands may be misconstrued as part of the steps that can only be executed from a shell script.
+
+If you are eager to get your first Flask project started, but find the initial setup confusing, here are the steps to follow to get you started painlessly.
+
+* __One-time Setup__
+  + Create a new environment for your project
+  + Install Flask in the new environment
+  + Install Spyder in the new environment (optional)
+  
+* __Do these before you work on your project__
+  + Activate the environment
+  + Run your .py file
+
+* __You are done with flask for the day__
+  + Stop the server
+  
+The overall setup is like any other flask installation, but with Anaconda Navigator, the process is simplified because you don't have to worry about the command line.
+
+I assume you have installed Anaconda Navigator, if not, here is the [link](https://www.anaconda.com/products/individual). Your installation includes the _flask_ package.
+
+_Note: I am using MacOS 10.15. My Anaconda Navigator version is 1.9.12 and Python version is 3.7. I have not tested on Windows but given that all flask setup shown here is done directly and solely from Anaconda Navigator, it should not be any different from MacOS._  
+\
+
+#### One-time Setup
+
+##### 1. Create a new environment for your project
+* Open the Anaconda Navigator app
+* On the left pane, click _Environments_
+* At the bottom of the page, click _Create_
+* Enter a new environment name eg. virenv
+* Make sure the location and Python version are displayed. If not, re-start the app and do not launch any other applications within the app yet
+* Take note of the default _Location_ because this is where you will be saving your files later.
+* Click _Create_ and wait for the setup to complete.
+
+##### 2. Install flask in the New Environment
+* The new environment will automatically pre-load about a dozen packages but does not include flask
+* On the right panel of the _Environments_ page, look for the drop down list at the top where the defult value is "installed". Select "All".
+* Search "flask"
+* Select _flask_ by clicking on the checkbox. There are other flask packages but you can ignore those for now.
+* Click apply
+* Anaconda will install flask and its associated packages.
+
+##### 3. Install Spyder in the New Environment
+* On the Home page of the Navigator, select your new environment name in the _Applications on_ drop down list.
+* Click on the Install button in the Spyder box  
+_(You can install your favourite IDE if you like. My default IDE is IDLE but it seems to have an issue with Ctrl-C to stop the server.)_
+
+##### 4. Create a .py file and folders
+* Launch Spyder
+* Write a basic flask code like the one below and save it in the _virenv_ folder. In this example, let's call it main.py.
+
+      from flask import Flask
+      
+      app = Flask(__name__)
+      
+      @app.route("/")  
+      def home():  
+      return "Hello, World!"
+      
+      if __name__ == "__main__":  
+      app.run(debug=True)
+
+* Using your Finder or Windows Explorer, create blank two folders inside the _virenv_ folder: _static_ and _templates_ (you don't have to at this point but you are going to end up creating them anyway)
+
+That's all for the one-time setup.   
+\
+
+#### Do these before you work on your project
+
+##### 1. Activate the Environment
+* Go to the _Environments_ page
+* Click on the right arrow next to your environment name
+* A drop down menu displays several options.
+* Select _Open Terminal_ (you can also select the other options)
+* Your environment will now be activated. No command line required.
+
+##### 2. Run your main.py file
+* Launch Spyder
+* Open your main.py file located in ../opt/anaconda3/envs/virenv
+* Run the file
+
+This is the desired output on the Spyder console.  
+
+![](../project/images/2020-06-05_spyder_runpy.png)  
+\
+You can now begin work on your project. You can test if it works by typing "localhost:5000" in your browser. If you make changes to the file, just save it and run the file again from Spyder. Make sure to check the console that the reload is successful. Again, no command line required.  
+\
+
+#### You are done with flask for the day
+* Move your cursor to the Spyder console (shown in the image above) and type Ctrl-C to quit.  
+\
+\
+So, that's it. I hope this was easy enough for you to follow and you managed to setup your environment without any problems.
+
+
+
+
+
+
+
+

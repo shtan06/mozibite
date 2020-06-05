@@ -11,7 +11,7 @@
 
 
 
-<title>About</title>
+<title>Get Flask Up and Running from Anaconda Navigator</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -292,14 +292,126 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">About</h1>
+<h1 class="title toc-ignore">Get Flask Up and Running from Anaconda Navigator</h1>
 
 </div>
 
 
-<p>This site is built entirely on RStudio/R Markdown site generator in its simplest form with minimum coding, packages and themes. To learn more about R Markdown, go to: <a href="https://rmarkdown.rstudio.com/index.html" class="uri">https://rmarkdown.rstudio.com/index.html</a> or read the book, R Markdown: The Definitive Guide online <a href="https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html" class="uri">https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html</a>.</p>
-<p>Many of the posts here are based on my learning experience. I will share random stuff that I think would be useful information for you. I have not opened the site to comments yet. You can contact me at <a href="mailto:shtan06@gmail.com" class="email">shtan06@gmail.com</a>.</p>
-<p><em>“…break (the projects) down to their simplest form and then just make marginal improvements along the way to improve my odds of achieving them.”</em> - an inspiring advise from Stephen Duneier who gave a talk on TEDx on how to achieve your goals.</p>
+<p>Executing commands from your Terminal or Command Prompt is almost unavoidable in Python. Beginnners may find it difficult to make sense of what is going in this environment. You will find that many course instructors use them to perform even simple tasks like opening a file. To a learner who is following step by step for the first time, such commands may be misconstrued as part of the steps that can only be executed from a shell script.</p>
+<p>If you are eager to get your first Flask project started, but find the initial setup confusing, here are the steps to follow to get you started painlessly.</p>
+<ul>
+<li><strong>One-time Setup</strong>
+<ul>
+<li>Create a new environment for your project</li>
+<li>Install Flask in the new environment</li>
+<li>Install Spyder in the new environment (optional)</li>
+</ul></li>
+<li><strong>Do these before you work on your project</strong>
+<ul>
+<li>Activate the environment</li>
+<li>Run your .py file</li>
+</ul></li>
+<li><strong>You are done with flask for the day</strong>
+<ul>
+<li>Stop the server</li>
+</ul></li>
+</ul>
+<p>The overall setup is like any other flask installation, but with Anaconda Navigator, the process is simplified because you don’t have to worry about the command line.</p>
+<p>I assume you have installed Anaconda Navigator, if not, here is the <a href="https://www.anaconda.com/products/individual">link</a>. Your installation includes the <em>flask</em> package.</p>
+<p><em>Note: I am using MacOS 10.15. My Anaconda Navigator version is 1.9.12 and Python version is 3.7. I have not tested on Windows but given that all flask setup shown here is done directly and solely from Anaconda Navigator, it should not be any different from MacOS.</em><br />
+<br />
+</p>
+<div id="one-time-setup" class="section level4">
+<h4>One-time Setup</h4>
+<div id="create-a-new-environment-for-your-project" class="section level5">
+<h5>1. Create a new environment for your project</h5>
+<ul>
+<li>Open the Anaconda Navigator app</li>
+<li>On the left pane, click <em>Environments</em></li>
+<li>At the bottom of the page, click <em>Create</em></li>
+<li>Enter a new environment name eg. virenv</li>
+<li>Make sure the location and Python version are displayed. If not, re-start the app and do not launch any other applications within the app yet</li>
+<li>Take note of the default <em>Location</em> because this is where you will be saving your files later.</li>
+<li>Click <em>Create</em> and wait for the setup to complete.</li>
+</ul>
+</div>
+<div id="install-flask-in-the-new-environment" class="section level5">
+<h5>2. Install flask in the New Environment</h5>
+<ul>
+<li>The new environment will automatically pre-load about a dozen packages but does not include flask</li>
+<li>On the right panel of the <em>Environments</em> page, look for the drop down list at the top where the defult value is “installed”. Select “All”.</li>
+<li>Search “flask”</li>
+<li>Select <em>flask</em> by clicking on the checkbox. There are other flask packages but you can ignore those for now.</li>
+<li>Click apply</li>
+<li>Anaconda will install flask and its associated packages.</li>
+</ul>
+</div>
+<div id="install-spyder-in-the-new-environment" class="section level5">
+<h5>3. Install Spyder in the New Environment</h5>
+<ul>
+<li>On the Home page of the Navigator, select your new environment name in the <em>Applications on</em> drop down list.</li>
+<li>Click on the Install button in the Spyder box<br />
+<em>(You can install your favourite IDE if you like. My default IDE is IDLE but it seems to have an issue with Ctrl-C to stop the server.)</em></li>
+</ul>
+</div>
+<div id="create-a-.py-file-and-folders" class="section level5">
+<h5>4. Create a .py file and folders</h5>
+<ul>
+<li>Launch Spyder</li>
+<li><p>Write a basic flask code like the one below and save it in the <em>virenv</em> folder. In this example, let’s call it main.py.</p>
+<pre><code>from flask import Flask
+
+app = Flask(__name__)
+
+@app.route(&quot;/&quot;)  
+def home():  
+return &quot;Hello, World!&quot;
+
+if __name__ == &quot;__main__&quot;:  
+app.run(debug=True)</code></pre></li>
+<li><p>Using your Finder or Windows Explorer, create blank two folders inside the <em>virenv</em> folder: <em>static</em> and <em>templates</em> (you don’t have to at this point but you are going to end up creating them anyway)</p></li>
+</ul>
+<p>That’s all for the one-time setup.<br />
+<br />
+</p>
+</div>
+</div>
+<div id="do-these-before-you-work-on-your-project" class="section level4">
+<h4>Do these before you work on your project</h4>
+<div id="activate-the-environment" class="section level5">
+<h5>1. Activate the Environment</h5>
+<ul>
+<li>Go to the <em>Environments</em> page</li>
+<li>Click on the right arrow next to your environment name</li>
+<li>A drop down menu displays several options.</li>
+<li>Select <em>Open Terminal</em> (you can also select the other options)</li>
+<li>Your environment will now be activated. No command line required.</li>
+</ul>
+</div>
+<div id="run-your-main.py-file" class="section level5">
+<h5>2. Run your main.py file</h5>
+<ul>
+<li>Launch Spyder</li>
+<li>Open your main.py file located in ../opt/anaconda3/envs/virenv</li>
+<li>Run the file</li>
+</ul>
+<p>This is the desired output on the Spyder console.</p>
+<p><img src="../project/images/2020-06-05_spyder_runpy.png" /><br />
+<br />
+You can now begin work on your project. You can test if it works by typing “localhost:5000” in your browser. If you make changes to the file, just save it and run the file again from Spyder. Make sure to check the console that the reload is successful. Again, no command line required.<br />
+<br />
+</p>
+</div>
+</div>
+<div id="you-are-done-with-flask-for-the-day" class="section level4">
+<h4>You are done with flask for the day</h4>
+<ul>
+<li>Move your cursor to the Spyder console (shown in the image above) and type Ctrl-C to quit.<br />
+<br />
+<br />
+So, that’s it. I hope this was easy enough for you to follow and you managed to setup your environment without any problems.</li>
+</ul>
+</div>
 
 
 
