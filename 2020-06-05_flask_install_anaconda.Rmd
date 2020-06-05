@@ -86,13 +86,11 @@ That's all for the one-time setup.
 
 This is the desired output on the Spyder console.  
 
-![](../project/images/2020-06-05_spyder_runpy.png)  
-\
 You can now begin work on your project. You can test if it works by typing "localhost:5000" in your browser. If you make changes to the file, just save it and run the file again from Spyder. Make sure to check the console that the reload is successful. Again, no command line required.  
 \
 
 #### You are done with flask for the day
-* Move your cursor to the Spyder console (shown in the image above) and type Ctrl-C to quit.  
+* Move your cursor to the Spyder console and type Ctrl-C to quit.  
 \
 \
 So, that's it. I hope this was easy enough for you to follow and you managed to setup your environment without any problems.
