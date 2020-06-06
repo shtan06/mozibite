@@ -3,7 +3,7 @@ title: "Get Flask Up and Running from Anaconda Navigator"
 output: html_document
 ---
 
-Executing commands from your Terminal or Command Prompt is almost unavoidable in Python. Beginnners may find it difficult to make sense of what is going in this environment. You will find that many course instructors use them to perform even simple tasks like opening a file. To a learner who is following step by step for the first time, such commands may be misconstrued as part of the steps that can only be executed from a shell script.
+Executing commands from your Terminal or Command Prompt is almost unavoidable in Python. Beginners may find it difficult to make sense of what is going in this environment. You will find that many course instructors use them to perform even simple tasks like opening a file. To a learner who is following step by step for the first time, such commands may be misconstrued as part of the steps that can only be executed from a shell script.
 
 If you are eager to get your first Flask project started, but find the initial setup confusing, here are the steps to follow to get you started painlessly.
 
@@ -41,9 +41,9 @@ _Note: I am using MacOS 10.15. My Anaconda Navigator version is 1.9.12 and Pytho
 * The new environment will automatically pre-load about a dozen packages but does not include flask
 * On the right panel of the _Environments_ page, look for the drop down list at the top where the defult value is "installed". Select "All".
 * Search "flask"
-* Select _flask_ by clicking on the checkbox. There are other flask packages but you can ignore those for now.
+* Select _flask_ by clicking on the checkbox. There are other flask extensions but you can ignore those for now.
 * Click apply
-* Anaconda will install flask and its associated packages.
+* Anaconda will install flask and its dependecies.
 
 ##### 3. Install Spyder in the New Environment
 * On the Home page of the Navigator, select your new environment name in the _Applications on_ drop down list.
