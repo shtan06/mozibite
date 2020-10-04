@@ -22,8 +22,13 @@ navbar:
           href: page_c.html
         - text: "blogdown"
           href: page_d.html
+    - text: "Finance"
+      href: amortisation.html
     - text: "Blog"
       href: blogs.html
+      
+      
+      
       
   right:
     - icon: fa-question fa-lg
