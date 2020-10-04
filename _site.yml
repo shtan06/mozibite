@@ -9,3 +9,5 @@ navbar:
       href: about.html
     - text: "Blog"
       href: blogs.html
+    - text: "R Tutorial"
+      href: rtutorial.html
