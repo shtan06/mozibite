@@ -4,12 +4,10 @@ navbar:
   title: "mozibite"
   left:
     - text: "Home"
-      icon: 
       href: index.html
     - text: "About"
       href: about.html
     - text: "R Tutorial"
-      icon: 
       menu:
         - text: "Basic"
         - text: "Beginner Intro"
@@ -30,6 +28,6 @@ navbar:
       
       
       
-  right:
-    - icon: fa-question fa-lg
-      href: https://example.com
+ # right:
+  #  - icon: fa-question fa-lg
+   #   href: https://example.com

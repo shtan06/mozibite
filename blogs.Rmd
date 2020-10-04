@@ -5,8 +5,8 @@ output: html_document
 
 <br>
 
-[Get flask Up and Running with Anaconda Navigator](2020-06-05_flask_install_anaconda.html)  
+[Get flask Up and Running with Anaconda Navigator](Blog_2020-06-05_flask_install_anaconda.html)  
 Last updated: 5-Jun-2020
 
-[Creating a MySQL DB Instance on AWS RDS](2020-06-03_mysql_aws_rds.html)  
+[Creating a MySQL DB Instance on AWS RDS](Blog_2020-06-03_mysql_aws_rds.html)  
 Last updated: 3-Jun-2020
