@@ -1,6 +1,10 @@
 ---
 title: "Blogs"
-output: html_document
+output:
+  html_document:
+    theme: sandstone
+    highlight: tango  
+
 ---
 
 <br>

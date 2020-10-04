@@ -1,6 +1,9 @@
 ---
 title: "R Tutorial"
-output: html_document
+output:
+  html_document:
+    theme: sandstone
+    highlight: tango  
 ---
 
 <br>
