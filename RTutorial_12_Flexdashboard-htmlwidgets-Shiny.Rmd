@@ -92,7 +92,7 @@ vertical_layout: scroll
 
 ## Shiny
 
-### Shiny
+### __Shiny__
 
 <br>
 Go to File > New File > R Markdown > Shiny

@@ -491,12 +491,12 @@ div.tocify {
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>df1 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x=</span>letters[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>], <span class="dt">y=</span><span class="kw">rnorm</span>(<span class="dv">5</span>), <span class="dt">z=</span><span class="kw">runif</span>(<span class="dv">5</span>)<span class="op">&gt;</span><span class="fl">0.5</span>,</span>
 <span id="cb1-2"><a href="#cb1-2"></a>                  <span class="dt">status=</span><span class="kw">factor</span>(<span class="kw">c</span>(<span class="st">&quot;Open&quot;</span>,<span class="st">&quot;Closed&quot;</span>,<span class="st">&quot;Closed&quot;</span>,<span class="st">&quot;Open&quot;</span>,<span class="st">&quot;Pending&quot;</span>)))</span>
 <span id="cb1-3"><a href="#cb1-3"></a>df1</span></code></pre></div>
-<pre><code>##   x          y     z  status
-## 1 a  0.2005690  TRUE    Open
-## 2 b -1.1675255  TRUE  Closed
-## 3 c  0.5792595 FALSE  Closed
-## 4 d  0.9658102  TRUE    Open
-## 5 e  0.6914356 FALSE Pending</code></pre>
+<pre><code>##   x          y    z  status
+## 1 a -0.7757644 TRUE    Open
+## 2 b  0.7800790 TRUE  Closed
+## 3 c  0.7892912 TRUE  Closed
+## 4 d -0.5558040 TRUE    Open
+## 5 e  0.4807449 TRUE Pending</code></pre>
 <ul>
 <li><code>View(df1)</code> displays all data in a separate data file<br />
 </li>
@@ -509,31 +509,31 @@ div.tocify {
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">class</span>(df1)</span></code></pre></div>
 <pre><code>## [1] &quot;data.frame&quot;</code></pre>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">summary</span>(df1)</span></code></pre></div>
-<pre><code>##  x           y               z               status 
-##  a:1   Min.   :-1.1675   Mode :logical   Closed :2  
-##  b:1   1st Qu.: 0.2006   FALSE:2         Open   :2  
-##  c:1   Median : 0.5793   TRUE :3         Pending:1  
-##  d:1   Mean   : 0.2539                              
-##  e:1   3rd Qu.: 0.6914                              
-##        Max.   : 0.9658</code></pre>
+<pre><code>##  x           y              z               status 
+##  a:1   Min.   :-0.7758   Mode:logical   Closed :2  
+##  b:1   1st Qu.:-0.5558   TRUE:5         Open   :2  
+##  c:1   Median : 0.4807                  Pending:1  
+##  d:1   Mean   : 0.1437                             
+##  e:1   3rd Qu.: 0.7801                             
+##        Max.   : 0.7893</code></pre>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">str</span>(df1)</span></code></pre></div>
 <pre><code>## &#39;data.frame&#39;:    5 obs. of  4 variables:
 ##  $ x     : Factor w/ 5 levels &quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;,..: 1 2 3 4 5
-##  $ y     : num  0.201 -1.168 0.579 0.966 0.691
-##  $ z     : logi  TRUE TRUE FALSE TRUE FALSE
+##  $ y     : num  -0.776 0.78 0.789 -0.556 0.481
+##  $ z     : logi  TRUE TRUE TRUE TRUE TRUE
 ##  $ status: Factor w/ 3 levels &quot;Closed&quot;,&quot;Open&quot;,..: 2 1 1 2 3</code></pre>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">head</span>(df1,<span class="dv">3</span>) <span class="co"># displays first 3 rows of data. Default is 6.</span></span></code></pre></div>
-<pre><code>##   x          y     z status
-## 1 a  0.2005690  TRUE   Open
-## 2 b -1.1675255  TRUE Closed
-## 3 c  0.5792595 FALSE Closed</code></pre>
+<pre><code>##   x          y    z status
+## 1 a -0.7757644 TRUE   Open
+## 2 b  0.7800790 TRUE Closed
+## 3 c  0.7892912 TRUE Closed</code></pre>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw">tail</span>(df1) <span class="co"># displays last 6 rows of data by default. Use tail(df1,n) for n number of rows.</span></span></code></pre></div>
-<pre><code>##   x          y     z  status
-## 1 a  0.2005690  TRUE    Open
-## 2 b -1.1675255  TRUE  Closed
-## 3 c  0.5792595 FALSE  Closed
-## 4 d  0.9658102  TRUE    Open
-## 5 e  0.6914356 FALSE Pending</code></pre>
+<pre><code>##   x          y    z  status
+## 1 a -0.7757644 TRUE    Open
+## 2 b  0.7800790 TRUE  Closed
+## 3 c  0.7892912 TRUE  Closed
+## 4 d -0.5558040 TRUE    Open
+## 5 e  0.4807449 TRUE Pending</code></pre>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw">rownames</span>(df1)</span></code></pre></div>
 <pre><code>## [1] &quot;1&quot; &quot;2&quot; &quot;3&quot; &quot;4&quot; &quot;5&quot;</code></pre>
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="kw">colnames</span>(df1) <span class="co"># displays all column names. Alternatively, names(df1) or ls(df1)</span></span></code></pre></div>
@@ -556,28 +556,28 @@ div.tocify {
 <h4>Access and Manipulate Data Frames</h4>
 <p><br></p>
 <p><strong>Using indexing to extract values</strong></p>
-<pre><code>##   x          y     z  status
-## 1 a  0.2005690  TRUE    Open
-## 2 b -1.1675255  TRUE  Closed
-## 3 c  0.5792595 FALSE  Closed
-## 4 d  0.9658102  TRUE    Open
-## 5 e  0.6914356 FALSE Pending</code></pre>
+<pre><code>##   x          y    z  status
+## 1 a -0.7757644 TRUE    Open
+## 2 b  0.7800790 TRUE  Closed
+## 3 c  0.7892912 TRUE  Closed
+## 4 d -0.5558040 TRUE    Open
+## 5 e  0.4807449 TRUE Pending</code></pre>
 <div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>df1[<span class="dv">3</span>,<span class="dv">2</span>] <span class="co"># dataframe[row,col]</span></span></code></pre></div>
-<pre><code>## [1] 0.5792595</code></pre>
+<pre><code>## [1] 0.7892912</code></pre>
 <div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>df1[<span class="dv">3</span><span class="op">:</span><span class="dv">5</span>,]</span></code></pre></div>
-<pre><code>##   x         y     z  status
-## 3 c 0.5792595 FALSE  Closed
-## 4 d 0.9658102  TRUE    Open
-## 5 e 0.6914356 FALSE Pending</code></pre>
+<pre><code>##   x          y    z  status
+## 3 c  0.7892912 TRUE  Closed
+## 4 d -0.5558040 TRUE    Open
+## 5 e  0.4807449 TRUE Pending</code></pre>
 <div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a>df1[,<span class="dv">2</span>] <span class="co"># results displayed as vector</span></span></code></pre></div>
-<pre><code>## [1]  0.2005690 -1.1675255  0.5792595  0.9658102  0.6914356</code></pre>
+<pre><code>## [1] -0.7757644  0.7800790  0.7892912 -0.5558040  0.4807449</code></pre>
 <div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a>df1[,<span class="dv">2</span>, drop=<span class="ot">FALSE</span>] <span class="co"># results displayed as data frame</span></span></code></pre></div>
 <pre><code>##            y
-## 1  0.2005690
-## 2 -1.1675255
-## 3  0.5792595
-## 4  0.9658102
-## 5  0.6914356</code></pre>
+## 1 -0.7757644
+## 2  0.7800790
+## 3  0.7892912
+## 4 -0.5558040
+## 5  0.4807449</code></pre>
 <div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>df1[<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">4</span>),<span class="st">&quot;z&quot;</span>]</span></code></pre></div>
 <pre><code>## [1] TRUE TRUE</code></pre>
 <div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a>df1[<span class="dv">4</span>] <span class="co"># if comma is left out, default refers to column number</span></span></code></pre></div>
@@ -588,48 +588,46 @@ div.tocify {
 ## 4    Open
 ## 5 Pending</code></pre>
 <div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a>df1[<span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>,<span class="op">-</span><span class="dv">3</span>),] <span class="co"># all except rows 1 and 3</span></span></code></pre></div>
-<pre><code>##   x          y     z  status
-## 2 b -1.1675255  TRUE  Closed
-## 4 d  0.9658102  TRUE    Open
-## 5 e  0.6914356 FALSE Pending</code></pre>
+<pre><code>##   x          y    z  status
+## 2 b  0.7800790 TRUE  Closed
+## 4 d -0.5558040 TRUE    Open
+## 5 e  0.4807449 TRUE Pending</code></pre>
 <p><br></p>
 <p><strong>Select/filter data frame by component values</strong></p>
 <div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a>df1<span class="op">$</span>y</span></code></pre></div>
-<pre><code>## [1]  0.2005690 -1.1675255  0.5792595  0.9658102  0.6914356</code></pre>
+<pre><code>## [1] -0.7757644  0.7800790  0.7892912 -0.5558040  0.4807449</code></pre>
 <div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="kw">mean</span>(df1<span class="op">$</span>y)</span></code></pre></div>
-<pre><code>## [1] 0.2539098</code></pre>
+<pre><code>## [1] 0.1437093</code></pre>
 <div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a><span class="kw">with</span>(df1,<span class="kw">mean</span>(<span class="st">&quot;y&quot;</span>)) <span class="co"># with eliminates the use of $</span></span></code></pre></div>
 <pre><code>## Warning in mean.default(&quot;y&quot;): argument is not numeric or logical: returning NA</code></pre>
 <pre><code>## [1] NA</code></pre>
 <div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a><span class="kw">with</span>(df1,<span class="kw">mean</span>(y[z<span class="op">==</span><span class="st">&quot;TRUE&quot;</span>]))</span></code></pre></div>
-<pre><code>## [1] -0.0003820926</code></pre>
+<pre><code>## [1] 0.1437093</code></pre>
 <div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a>df1[[<span class="st">&quot;y&quot;</span>]]</span></code></pre></div>
-<pre><code>## [1]  0.2005690 -1.1675255  0.5792595  0.9658102  0.6914356</code></pre>
+<pre><code>## [1] -0.7757644  0.7800790  0.7892912 -0.5558040  0.4807449</code></pre>
 <div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a>df1[<span class="st">&quot;y&quot;</span>]</span></code></pre></div>
 <pre><code>##            y
-## 1  0.2005690
-## 2 -1.1675255
-## 3  0.5792595
-## 4  0.9658102
-## 5  0.6914356</code></pre>
+## 1 -0.7757644
+## 2  0.7800790
+## 3  0.7892912
+## 4 -0.5558040
+## 5  0.4807449</code></pre>
 <div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a><span class="kw">sum</span>(df1[<span class="st">&quot;y&quot;</span>])</span></code></pre></div>
-<pre><code>## [1] 1.269549</code></pre>
+<pre><code>## [1] 0.7185466</code></pre>
 <div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1"></a>df1<span class="op">$</span>x[df1<span class="op">$</span>z<span class="op">==</span><span class="st">&quot;FALSE&quot;</span> <span class="op">&amp;</span><span class="st"> </span>df1<span class="op">$</span>status<span class="op">==</span><span class="st">&quot;Closed&quot;</span>]  </span></code></pre></div>
-<pre><code>## [1] c
+<pre><code>## factor(0)
 ## Levels: a b c d e</code></pre>
 <div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1"></a>df1[df1<span class="op">$</span>z<span class="op">==</span><span class="st">&quot;FALSE&quot;</span><span class="op">|</span>df1<span class="op">$</span>status<span class="op">==</span><span class="st">&quot;Closed&quot;</span>,]  </span></code></pre></div>
-<pre><code>##   x          y     z  status
-## 2 b -1.1675255  TRUE  Closed
-## 3 c  0.5792595 FALSE  Closed
-## 5 e  0.6914356 FALSE Pending</code></pre>
+<pre><code>##   x         y    z status
+## 2 b 0.7800790 TRUE Closed
+## 3 c 0.7892912 TRUE Closed</code></pre>
 <div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1"></a><span class="kw">aggregate</span>(df1<span class="op">$</span>y,<span class="dt">by=</span><span class="kw">list</span>(df1<span class="op">$</span>z), <span class="dt">FUN=</span>sum) <span class="co"># group the data by TRUE/FALSE and sum(y)</span></span></code></pre></div>
-<pre><code>##   Group.1            x
-## 1   FALSE  1.270695108
-## 2    TRUE -0.001146278</code></pre>
+<pre><code>##   Group.1         x
+## 1    TRUE 0.7185466</code></pre>
 <p><br></p>
 <p><strong>Look-up row numbers</strong></p>
 <div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1"></a><span class="kw">which</span>(df1<span class="op">$</span>z<span class="op">==</span><span class="st">&quot;TRUE&quot;</span>)</span></code></pre></div>
-<pre><code>## [1] 1 2 4</code></pre>
+<pre><code>## [1] 1 2 3 4 5</code></pre>
 <p><br></p>
 <p><strong>Replacing Values</strong><br />
 This method is similar to re-assigning the data frame</p>

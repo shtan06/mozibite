@@ -19,7 +19,7 @@ output: html_document
 
 [Session 5 - Coding - Data Frames](RTutorial_05_Coding-Data-Frames.html)  
 
-[Session 6 - Coding - Loops and Functions](RTutorial_06_Loops-and-Functions.html)  
+[Session 6 - Coding - Loops and Functions](RTutorial_06_Coding-Loops-and-Functions.html)  
 
 [Session 7 - Coding - Formatting](RTutorial_07_Coding-Formatting.html)  
 
