@@ -26,8 +26,8 @@ navbar:
       href: blogs.html
 output:
   html_document:
-    theme: cosmo
-    highlight: textmate     
+    theme: sandstone
+    highlight: tango     
       
       
  # right:
