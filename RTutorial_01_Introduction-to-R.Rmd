@@ -27,7 +27,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <br>
 
-![](/cloud/project/images/RTutorial_s1_Learning_Guide.png)
+![](/cloud/project/images/RTutorial/RTutorial_01_Learning_Guide.png)
 
 <br>
 <br>
@@ -74,7 +74,7 @@ _Note: this tutorial and notes are not designed for self-learning._
 
 R Data Exploration Workflow
 
-![](/cloud/project/images/RTutorial_s1_Data_Exploration_Workflow.png)
+![](/cloud/project/images/RTutorial/RTutorial_01_Data_Exploration_Workflow.png)
 
 _Source: R for Data Science_ https://r4ds.had.co.nz/explore-intro.html
 

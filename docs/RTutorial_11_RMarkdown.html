@@ -519,11 +519,11 @@ Other df_print options are <code>default</code>, <code>kable</code> and <code>ti
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>df1 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x=</span>letters[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>], <span class="dt">y=</span><span class="kw">rnorm</span>(<span class="dv">5</span>), <span class="dt">z=</span><span class="kw">runif</span>(<span class="dv">5</span>)<span class="op">&gt;</span><span class="fl">0.5</span>, <span class="dt">status=</span><span class="kw">factor</span>(<span class="kw">c</span>(<span class="st">&quot;Open&quot;</span>,<span class="st">&quot;Closed&quot;</span>,<span class="st">&quot;Closed&quot;</span>,<span class="st">&quot;Open&quot;</span>,<span class="st">&quot;Pending&quot;</span>)))</span>
 <span id="cb1-2"><a href="#cb1-2"></a>df1</span></code></pre></div>
 <pre><code>##   x          y     z  status
-## 1 a  1.1500274 FALSE    Open
-## 2 b -0.1215918  TRUE  Closed
-## 3 c  0.7964654  TRUE  Closed
-## 4 d -0.9769767  TRUE    Open
-## 5 e -1.1961923 FALSE Pending</code></pre>
+## 1 a  3.6351273  TRUE    Open
+## 2 b  0.1536507 FALSE  Closed
+## 3 c  1.4207548  TRUE  Closed
+## 4 d  0.5357558  TRUE    Open
+## 5 e -0.6464678  TRUE Pending</code></pre>
 <p><br></p>
 </div>
 <div id="dt-data-table" class="section level4">
@@ -531,8 +531,8 @@ Other df_print options are <code>default</code>, <code>kable</code> and <code>ti
 <p>Install and load DT package</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">library</span>(DT)</span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="kw">datatable</span>(df1)</span></code></pre></div>
-<div id="htmlwidget-ef7c4fadda5d0b3abc26" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ef7c4fadda5d0b3abc26">{"x":{"filter":"none","data":[["1","2","3","4","5"],["a","b","c","d","e"],[1.15002744770759,-0.12159182323441,0.796465351263589,-0.976976659157682,-1.19619226207879],[false,true,true,true,false],["Open","Closed","Closed","Open","Pending"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>x<\/th>\n      <th>y<\/th>\n      <th>z<\/th>\n      <th>status<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":2},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-1329065ea123674af489" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1329065ea123674af489">{"x":{"filter":"none","data":[["1","2","3","4","5"],["a","b","c","d","e"],[3.6351273011692,0.153650659836588,1.42075479228977,0.535755751446309,-0.646467847064974],[true,false,true,true,true],["Open","Closed","Closed","Open","Pending"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>x<\/th>\n      <th>y<\/th>\n      <th>z<\/th>\n      <th>status<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":2},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 <p>For more info on DT, go to <a href="https://rstudio.github.io/DT/" class="uri">https://rstudio.github.io/DT/</a></p>
 <p><br></p>
 </div>
@@ -573,10 +573,10 @@ status
 </tr>
 <tr>
 <td style="text-align:right; padding-left:  2em;" indentlevel="1">
-1.1500274
+3.6351273
 </td>
 <td style="text-align:left;width: 8em; background-color: yellow !important;">
-FALSE
+TRUE
 </td>
 <td style="text-align:left;">
 Open
@@ -584,10 +584,10 @@ Open
 </tr>
 <tr>
 <td style="text-align:right; padding-left:  2em;" indentlevel="1">
--0.1215918
+0.1536507
 </td>
 <td style="text-align:left;width: 8em; background-color: yellow !important;">
-TRUE
+FALSE
 </td>
 <td style="text-align:left;">
 Closed
@@ -600,7 +600,7 @@ Closed
 </tr>
 <tr>
 <td style="text-align:right; padding-left:  2em;" indentlevel="1">
-0.7964654
+1.4207548
 </td>
 <td style="text-align:left;width: 8em; background-color: yellow !important;">
 TRUE
@@ -611,7 +611,7 @@ Closed
 </tr>
 <tr>
 <td style="text-align:right; padding-left:  2em;" indentlevel="1">
--0.9769767
+0.5357558
 </td>
 <td style="text-align:left;width: 8em; background-color: yellow !important;">
 TRUE
@@ -622,10 +622,10 @@ Open
 </tr>
 <tr>
 <td style="text-align:right; padding-left:  2em;" indentlevel="1">
--1.1961923
+-0.6464678
 </td>
 <td style="text-align:left;width: 8em; background-color: yellow !important;">
-FALSE
+TRUE
 </td>
 <td style="text-align:left;">
 Pending
@@ -665,10 +665,10 @@ status
 a
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: #FA614B; width: 96.14%">1.1500274</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: #FA614B; width: 100.00%">3.6351273</span>
 </td>
 <td style="text-align:right;">
-FALSE
+TRUE
 </td>
 <td style="text-align:right;">
 Open
@@ -679,10 +679,10 @@ Open
 b
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: #FA614B; width: -10.16%">-0.1215918</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: #FA614B; width: 4.23%">0.1536507</span>
 </td>
 <td style="text-align:right;">
-TRUE
+FALSE
 </td>
 <td style="text-align:right;">
 Closed
@@ -693,7 +693,7 @@ Closed
 c
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: #FA614B; width: 66.58%">0.7964654</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: #FA614B; width: 39.08%">1.4207548</span>
 </td>
 <td style="text-align:right;">
 TRUE
@@ -707,7 +707,7 @@ Closed
 d
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: #FA614B; width: -81.67%">-0.9769767</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: #FA614B; width: 14.74%">0.5357558</span>
 </td>
 <td style="text-align:right;">
 TRUE
@@ -721,10 +721,10 @@ Open
 e
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: #FA614B; width: -100.00%">-1.1961923</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: #FA614B; width: -17.78%">-0.6464678</span>
 </td>
 <td style="text-align:right;">
-FALSE
+TRUE
 </td>
 <td style="text-align:right;">
 Pending

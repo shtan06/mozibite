@@ -36,23 +36,23 @@ Go to File > New File > RMarkdown > From Template > Flex Dashboard
 
 The RMarkdown template contains a YAML (yet another markup language) header, text and code chunks that when knit, produces a dashboard layout with 3 charts (empty) split across 2 columns.  
 
-![](/Users/user/Documents/REnv/Flexdashboard_Template.png)
+![](/cloud/project/images/RTutorial/RTutorial_12_Flexdashboard_Template.png)
 <br>
 <br>
 
-![](/Users/user/Documents/REnv/Flexdashboard_Template_Knit.png)
+![](/cloud/project/images/RTutorial/RTutorial_12_Flexdashboard_Template_Knit.png)
 <br>
 <br>
 
 Add some text and code in each column to generate a simple dashboard:  
 
-![](/Users/user/Documents/REnv/Flexdashboard_Example1.png)
+![](/cloud/project/images/RTutorial/RTutorial_12_Flexdashboard_Example1.png)
 <br>
 <br>
 
 **Design Layout**  
 
-![](/Users/user/Documents/REnv/Flexdashboard_Layout.png)
+![](/cloud/project/images/RTutorial/RTutorial_12_Flexdashboard_Layout.png)
 <br>
 <br>
 
@@ -60,11 +60,11 @@ Add some text and code in each column to generate a simple dashboard:
 
 https://rmarkdown.rstudio.com/flexdashboard/using.html#storyboards  
 
-![](/Users/user/Documents/REnv/Flexdashboard_Storyboard.png)
+![](/cloud/project/images/RTutorial/RTutorial_12_Flexdashboard_Storyboard.png)
 <br>
 <br>
 
-![](/Users/user/Documents/REnv/Flexdashboard_Storyboard_Code.png)
+![](/cloud/project/images/RTutorial/RTutorial_12_Flexdashboard_Storyboard_Code.png)
 <br>
 <br>
 

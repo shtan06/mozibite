@@ -411,14 +411,14 @@ div.tocify {
 <code>geom_col()</code></p>
 <div id="histogram" class="section level4">
 <h4>Histogram</h4>
-<p><img src="/Users/user/Documents/REnv/ggplot2_histogram.png" /> <br></p>
+<p><img src="images/RTutorial/RTutorial_08_ggplot2_histogram.png" /> <br></p>
 </div>
 <div id="pie-chart" class="section level4">
 <h4>Pie Chart</h4>
 <p>Summarise the data by region<br />
 <code>world_pop_region &lt;- aggregate(world_pop_2020$Population, by=list(Region=world_pop_2020$Region), FUN=sum)</code><br />
 <code>colnames(world_pop_region) &lt;- c("Region","Population")</code></p>
-<p><img src="/Users/user/Documents/REnv/ggplot2_pie.png" /> <br> <br></p>
+<p><img src="images/RTutorial/RTutorial_08_ggplot2_pie.png" /> <br> <br></p>
 </div>
 </div>
 </div>
@@ -432,7 +432,7 @@ div.tocify {
 <p>Filter data by Country = Malaysia <code>world_pop_msia &lt;- world_pop[world_pop$Country=="Malaysia",]</code></p>
 <p>Plot the graph<br />
 <code>plot_ly(world_pop_msia,x=~Year, y=~Population, type="bar")</code></p>
-<p><img src="/Users/user/Documents/REnv/plotly_histogram.png" /></p>
+<p><img src="images/RTutorial/RTutorial_08_plotly_histogram.png" /></p>
 </div>
 <div id="pie-chart-1" class="section level4">
 <h4>Pie Chart</h4>
@@ -444,7 +444,7 @@ div.tocify {
 <code>yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))</code><br />
 <code>fig</code></p>
 <p><br></p>
-<p><img src="/Users/user/Documents/REnv/plotly_pie.png" /></p>
+<p><img src="images/RTutorial/RTutorial_08_plotly_pie.png" /></p>
 </div>
 <div id="scatter-plot" class="section level4">
 <h4>Scatter Plot</h4>
@@ -452,7 +452,7 @@ div.tocify {
 <code>china_india_pop &lt;- world_pop[world_pop$Country=="China" | world_pop$Country=="India",]</code></p>
 <p>Plot Graph<br />
 <code>plot_ly(data = china_india_pop, x = ~Year, y = ~Population, color = ~Country, type='scatter')</code></p>
-<p><img src="/Users/user/Documents/REnv/plotly_scatter.png" /></p>
+<p><img src="images/RTutorial/RTutorial_08_plotly_scatter.png" /></p>
 </div>
 </div>
 </div>

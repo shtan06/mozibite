@@ -55,7 +55,7 @@ __Plot Basic Graphs__
 
 #### Histogram
 
-![](/Users/user/Documents/REnv/ggplot2_histogram.png) 
+![](/cloud/project/images/RTutorial/RTutorial_08_ggplot2_histogram.png) 
 <br>
 
 #### Pie Chart
@@ -64,7 +64,7 @@ Summarise the data by region
 `world_pop_region <- aggregate(world_pop_2020$Population, by=list(Region=world_pop_2020$Region), FUN=sum)`  
 `colnames(world_pop_region) <- c("Region","Population")`  
 
-![](/Users/user/Documents/REnv/ggplot2_pie.png)
+![](/cloud/project/images/RTutorial/RTutorial_08_ggplot2_pie.png)
 <br>
 <br>
 
@@ -82,7 +82,7 @@ Filter data by Country = Malaysia
 Plot the graph  
 `plot_ly(world_pop_msia,x=~Year, y=~Population, type="bar")`  
 
-![](/Users/user/Documents/REnv/plotly_histogram.png)
+![](/cloud/project/images/RTutorial/RTutorial_08_plotly_histogram.png)
 
 #### Pie Chart
 
@@ -99,7 +99,7 @@ Plot the graph
 
 <br>
 
-![](/Users/user/Documents/REnv/plotly_pie.png)
+![](/cloud/project/images/RTutorial/RTutorial_08_plotly_pie.png)
 
 #### Scatter Plot
 
@@ -109,5 +109,5 @@ Create a new Data Frame
 Plot Graph  
 `plot_ly(data = china_india_pop, x = ~Year, y = ~Population, color = ~Country, type='scatter')`  
 
-![](/Users/user/Documents/REnv/plotly_scatter.png)
+![](/cloud/project/images/RTutorial/RTutorial_08_plotly_scatter.png)
 
