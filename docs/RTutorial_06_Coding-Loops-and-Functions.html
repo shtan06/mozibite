@@ -537,41 +537,31 @@ div.tocify {
 <span id="cb9-3"><a href="#cb9-3"></a>  <span class="kw">message</span>(random_no)</span>
 <span id="cb9-4"><a href="#cb9-4"></a>  <span class="cf">if</span>(random_no<span class="op">&gt;</span><span class="dv">16</span>) <span class="cf">break</span></span>
 <span id="cb9-5"><a href="#cb9-5"></a>}</span></code></pre></div>
-<pre><code>## 3</code></pre>
-<pre><code>## 5</code></pre>
-<pre><code>## 17</code></pre>
+<pre><code>## 20</code></pre>
 <p><br></p>
 </div>
 <div id="while" class="section level4">
 <h4>While</h4>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="co"># Example 1</span></span>
-<span id="cb13-2"><a href="#cb13-2"></a></span>
-<span id="cb13-3"><a href="#cb13-3"></a>i &lt;-<span class="st"> </span><span class="dv">0</span> <span class="co"># while loop must have a starting point. Can be any number in this case.</span></span>
-<span id="cb13-4"><a href="#cb13-4"></a><span class="cf">while</span>(i<span class="op">&lt;</span><span class="dv">16</span>)</span>
-<span id="cb13-5"><a href="#cb13-5"></a>  {</span>
-<span id="cb13-6"><a href="#cb13-6"></a>  <span class="kw">print</span>(i)</span>
-<span id="cb13-7"><a href="#cb13-7"></a>  i=<span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">20</span>,<span class="dv">1</span>)</span>
-<span id="cb13-8"><a href="#cb13-8"></a>  <span class="kw">print</span>(i)</span>
-<span id="cb13-9"><a href="#cb13-9"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># Example 1</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a></span>
+<span id="cb11-3"><a href="#cb11-3"></a>i &lt;-<span class="st"> </span><span class="dv">0</span> <span class="co"># while loop must have a starting point. Can be any number in this case.</span></span>
+<span id="cb11-4"><a href="#cb11-4"></a><span class="cf">while</span>(i<span class="op">&lt;</span><span class="dv">16</span>)</span>
+<span id="cb11-5"><a href="#cb11-5"></a>  {</span>
+<span id="cb11-6"><a href="#cb11-6"></a>  <span class="kw">print</span>(i)</span>
+<span id="cb11-7"><a href="#cb11-7"></a>  i=<span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">20</span>,<span class="dv">1</span>)</span>
+<span id="cb11-8"><a href="#cb11-8"></a>  <span class="kw">print</span>(i)</span>
+<span id="cb11-9"><a href="#cb11-9"></a>}</span></code></pre></div>
 <pre><code>## [1] 0
-## [1] 9
-## [1] 9
-## [1] 6
-## [1] 6
-## [1] 8
-## [1] 8
-## [1] 13
-## [1] 13
-## [1] 5
-## [1] 5
+## [1] 2
+## [1] 2
 ## [1] 20</code></pre>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="co"># Example 2</span></span>
-<span id="cb15-2"><a href="#cb15-2"></a></span>
-<span id="cb15-3"><a href="#cb15-3"></a>i &lt;-<span class="st"> </span><span class="dv">1</span></span>
-<span id="cb15-4"><a href="#cb15-4"></a><span class="cf">while</span> (i <span class="op">&lt;</span><span class="st"> </span><span class="dv">6</span>) {</span>
-<span id="cb15-5"><a href="#cb15-5"></a><span class="kw">print</span>(i)</span>
-<span id="cb15-6"><a href="#cb15-6"></a>i =<span class="st"> </span>i<span class="op">+</span><span class="dv">1</span> <span class="co"># every loop add and stores increment value of 1, does not reset until the end. Loop will continue forever if you do not add +1.</span></span>
-<span id="cb15-7"><a href="#cb15-7"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="co"># Example 2</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a></span>
+<span id="cb13-3"><a href="#cb13-3"></a>i &lt;-<span class="st"> </span><span class="dv">1</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a><span class="cf">while</span> (i <span class="op">&lt;</span><span class="st"> </span><span class="dv">6</span>) {</span>
+<span id="cb13-5"><a href="#cb13-5"></a><span class="kw">print</span>(i)</span>
+<span id="cb13-6"><a href="#cb13-6"></a>i =<span class="st"> </span>i<span class="op">+</span><span class="dv">1</span> <span class="co"># every loop add and stores increment value of 1, does not reset until the end. Loop will continue forever if you do not add +1.</span></span>
+<span id="cb13-7"><a href="#cb13-7"></a>}</span></code></pre></div>
 <pre><code>## [1] 1
 ## [1] 2
 ## [1] 3
@@ -583,9 +573,9 @@ div.tocify {
 <div id="for" class="section level4">
 <h4>For</h4>
 <p>Used when you know exactly how many times you want the code to repeat.</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">6</span>){</span>
-<span id="cb17-2"><a href="#cb17-2"></a>  <span class="kw">message</span>(i)</span>
-<span id="cb17-3"><a href="#cb17-3"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">6</span>){</span>
+<span id="cb15-2"><a href="#cb15-2"></a>  <span class="kw">message</span>(i)</span>
+<span id="cb15-3"><a href="#cb15-3"></a>}</span></code></pre></div>
 <pre><code>## 1</code></pre>
 <pre><code>## 2</code></pre>
 <pre><code>## 3</code></pre>
@@ -606,40 +596,40 @@ div.tocify {
 <p><strong>Example 1</strong></p>
 <p>Create a function to calculate the average speed (km/h), given the distance travelled (km) and time (hours).</p>
 <p>Speed = Distance/Time</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>speed &lt;-<span class="st"> </span><span class="cf">function</span>(d,t) <span class="co"># arguments</span></span>
-<span id="cb24-2"><a href="#cb24-2"></a>{<span class="kw">print</span>(<span class="st">&quot;Your speed is:&quot;</span>); <span class="co"># contents</span></span>
-<span id="cb24-3"><a href="#cb24-3"></a>  (d<span class="op">/</span>t)</span>
-<span id="cb24-4"><a href="#cb24-4"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>speed &lt;-<span class="st"> </span><span class="cf">function</span>(d,t) <span class="co"># arguments</span></span>
+<span id="cb22-2"><a href="#cb22-2"></a>{<span class="kw">print</span>(<span class="st">&quot;Your speed is:&quot;</span>); <span class="co"># contents</span></span>
+<span id="cb22-3"><a href="#cb22-3"></a>  (d<span class="op">/</span>t)</span>
+<span id="cb22-4"><a href="#cb22-4"></a>}</span></code></pre></div>
 <p>Call the function:</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="kw">speed</span>(<span class="dv">100</span>,<span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="kw">speed</span>(<span class="dv">100</span>,<span class="dv">2</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;Your speed is:&quot;</code></pre>
 <pre><code>## [1] 50</code></pre>
 <p><strong>Example 2</strong></p>
 <p>Area and circumference of a circle = pi<em>radius(squared) and 2</em>pi* radius, respectively.</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>circle &lt;-<span class="st"> </span><span class="cf">function</span>(<span class="dt">r=</span><span class="dv">10</span>) <span class="kw">c</span>(pi<span class="op">*</span>r<span class="op">^</span><span class="dv">2</span>, <span class="dv">2</span><span class="op">*</span>pi<span class="op">*</span>r)</span>
-<span id="cb28-2"><a href="#cb28-2"></a></span>
-<span id="cb28-3"><a href="#cb28-3"></a><span class="co"># Note: braces {} can be omitted if the is only one line of code.</span></span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>circle &lt;-<span class="st"> </span><span class="cf">function</span>(<span class="dt">r=</span><span class="dv">10</span>) <span class="kw">c</span>(pi<span class="op">*</span>r<span class="op">^</span><span class="dv">2</span>, <span class="dv">2</span><span class="op">*</span>pi<span class="op">*</span>r)</span>
+<span id="cb26-2"><a href="#cb26-2"></a></span>
+<span id="cb26-3"><a href="#cb26-3"></a><span class="co"># Note: braces {} can be omitted if the is only one line of code.</span></span></code></pre></div>
 <p>Call the function:</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="kw">circle</span>() <span class="co"># note that the default r is 10 as defined in the function</span></span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="kw">circle</span>() <span class="co"># note that the default r is 10 as defined in the function</span></span></code></pre></div>
 <pre><code>## [1] 314.15927  62.83185</code></pre>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="kw">circle</span>(<span class="fl">6.5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="kw">circle</span>(<span class="fl">6.5</span>)</span></code></pre></div>
 <pre><code>## [1] 132.7323  40.8407</code></pre>
 <p><strong>Example 3</strong></p>
 <p>Using the example from the above If section:</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a>price &lt;-<span class="st"> </span><span class="cf">function</span>(x)</span>
-<span id="cb33-2"><a href="#cb33-2"></a>{</span>
-<span id="cb33-3"><a href="#cb33-3"></a>  <span class="cf">if</span>(x<span class="op">&gt;</span><span class="dv">2</span>){</span>
-<span id="cb33-4"><a href="#cb33-4"></a>  <span class="kw">message</span>(<span class="st">&quot;x is more than 2&quot;</span>)</span>
-<span id="cb33-5"><a href="#cb33-5"></a>} <span class="cf">else</span></span>
-<span id="cb33-6"><a href="#cb33-6"></a>  <span class="cf">if</span>(x<span class="op">&lt;</span><span class="dv">2</span>){</span>
-<span id="cb33-7"><a href="#cb33-7"></a>    <span class="kw">message</span>(<span class="st">&quot;x is less than 2&quot;</span>)</span>
-<span id="cb33-8"><a href="#cb33-8"></a>  } <span class="cf">else</span></span>
-<span id="cb33-9"><a href="#cb33-9"></a>    {</span>
-<span id="cb33-10"><a href="#cb33-10"></a>      <span class="kw">message</span>(<span class="st">&quot;x equals 2&quot;</span>)</span>
-<span id="cb33-11"><a href="#cb33-11"></a>      }</span>
-<span id="cb33-12"><a href="#cb33-12"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a>price &lt;-<span class="st"> </span><span class="cf">function</span>(x)</span>
+<span id="cb31-2"><a href="#cb31-2"></a>{</span>
+<span id="cb31-3"><a href="#cb31-3"></a>  <span class="cf">if</span>(x<span class="op">&gt;</span><span class="dv">2</span>){</span>
+<span id="cb31-4"><a href="#cb31-4"></a>  <span class="kw">message</span>(<span class="st">&quot;x is more than 2&quot;</span>)</span>
+<span id="cb31-5"><a href="#cb31-5"></a>} <span class="cf">else</span></span>
+<span id="cb31-6"><a href="#cb31-6"></a>  <span class="cf">if</span>(x<span class="op">&lt;</span><span class="dv">2</span>){</span>
+<span id="cb31-7"><a href="#cb31-7"></a>    <span class="kw">message</span>(<span class="st">&quot;x is less than 2&quot;</span>)</span>
+<span id="cb31-8"><a href="#cb31-8"></a>  } <span class="cf">else</span></span>
+<span id="cb31-9"><a href="#cb31-9"></a>    {</span>
+<span id="cb31-10"><a href="#cb31-10"></a>      <span class="kw">message</span>(<span class="st">&quot;x equals 2&quot;</span>)</span>
+<span id="cb31-11"><a href="#cb31-11"></a>      }</span>
+<span id="cb31-12"><a href="#cb31-12"></a>}</span></code></pre></div>
 <p>Call the function:</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="kw">price</span>(<span class="fl">1.8</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="kw">price</span>(<span class="fl">1.8</span>)</span></code></pre></div>
 <pre><code>## x is less than 2</code></pre>
 <p><br> <br></p>
 </div>

@@ -655,72 +655,73 @@ div.tocify {
 ##     intersect, setdiff, setequal, union</code></pre>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>df1 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x=</span>letters[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>], <span class="dt">y=</span><span class="kw">rnorm</span>(<span class="dv">5</span>), <span class="dt">z=</span><span class="kw">runif</span>(<span class="dv">5</span>)<span class="op">&gt;</span><span class="fl">0.5</span>, <span class="dt">status=</span><span class="kw">factor</span>(<span class="kw">c</span>(<span class="st">&quot;Open&quot;</span>,<span class="st">&quot;Closed&quot;</span>,<span class="st">&quot;Closed&quot;</span>,<span class="st">&quot;Open&quot;</span>,<span class="st">&quot;Pending&quot;</span>)))</span>
 <span id="cb5-2"><a href="#cb5-2"></a>df1</span></code></pre></div>
-<pre><code>##   x           y     z  status
-## 1 a  1.02622379 FALSE    Open
-## 2 b  0.06815488 FALSE  Closed
-## 3 c  0.26604399  TRUE  Closed
-## 4 d -0.96127002 FALSE    Open
-## 5 e  0.61283067 FALSE Pending</code></pre>
+<pre><code>##   x          y     z  status
+## 1 a  1.1044951 FALSE    Open
+## 2 b -1.1293638 FALSE  Closed
+## 3 c  1.2820363  TRUE  Closed
+## 4 d  0.3873631  TRUE    Open
+## 5 e -0.1749927 FALSE Pending</code></pre>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">filter</span>(df1, status<span class="op">==</span><span class="st">&quot;Open&quot;</span>, z<span class="op">==</span><span class="st">&quot;TRUE&quot;</span>)</span></code></pre></div>
-<pre><code>## [1] x      y      z      status
-## &lt;0 rows&gt; (or 0-length row.names)</code></pre>
+<pre><code>##   x         y    z status
+## 1 d 0.3873631 TRUE   Open</code></pre>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">filter</span>(df1, status<span class="op">==</span><span class="st">&quot;Open&quot;</span> <span class="op">|</span><span class="st"> </span>z<span class="op">==</span><span class="st">&quot;TRUE&quot;</span>)</span></code></pre></div>
 <pre><code>##   x         y     z status
-## 1 a  1.026224 FALSE   Open
-## 2 c  0.266044  TRUE Closed
-## 3 d -0.961270 FALSE   Open</code></pre>
+## 1 a 1.1044951 FALSE   Open
+## 2 c 1.2820363  TRUE Closed
+## 3 d 0.3873631  TRUE   Open</code></pre>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw">filter</span>(df1, z<span class="op">!=</span><span class="st">&quot;FALSE&quot;</span>)</span></code></pre></div>
-<pre><code>##   x        y    z status
-## 1 c 0.266044 TRUE Closed</code></pre>
+<pre><code>##   x         y    z status
+## 1 c 1.2820363 TRUE Closed
+## 2 d 0.3873631 TRUE   Open</code></pre>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw">arrange</span>(df1, <span class="kw">desc</span>(y)) <span class="co"># ascending: arrange(df1, y)</span></span></code></pre></div>
-<pre><code>##   x           y     z  status
-## 1 a  1.02622379 FALSE    Open
-## 2 e  0.61283067 FALSE Pending
-## 3 c  0.26604399  TRUE  Closed
-## 4 b  0.06815488 FALSE  Closed
-## 5 d -0.96127002 FALSE    Open</code></pre>
+<pre><code>##   x          y     z  status
+## 1 c  1.2820363  TRUE  Closed
+## 2 a  1.1044951 FALSE    Open
+## 3 d  0.3873631  TRUE    Open
+## 4 e -0.1749927 FALSE Pending
+## 5 b -1.1293638 FALSE  Closed</code></pre>
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="kw">select</span>(df1,status,z,y)</span></code></pre></div>
-<pre><code>##    status     z           y
-## 1    Open FALSE  1.02622379
-## 2  Closed FALSE  0.06815488
-## 3  Closed  TRUE  0.26604399
-## 4    Open FALSE -0.96127002
-## 5 Pending FALSE  0.61283067</code></pre>
+<pre><code>##    status     z          y
+## 1    Open FALSE  1.1044951
+## 2  Closed FALSE -1.1293638
+## 3  Closed  TRUE  1.2820363
+## 4    Open  TRUE  0.3873631
+## 5 Pending FALSE -0.1749927</code></pre>
 <div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="kw">select</span>(df1, y<span class="op">:</span>status)</span></code></pre></div>
-<pre><code>##             y     z  status
-## 1  1.02622379 FALSE    Open
-## 2  0.06815488 FALSE  Closed
-## 3  0.26604399  TRUE  Closed
-## 4 -0.96127002 FALSE    Open
-## 5  0.61283067 FALSE Pending</code></pre>
+<pre><code>##            y     z  status
+## 1  1.1044951 FALSE    Open
+## 2 -1.1293638 FALSE  Closed
+## 3  1.2820363  TRUE  Closed
+## 4  0.3873631  TRUE    Open
+## 5 -0.1749927 FALSE Pending</code></pre>
 <div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="kw">mutate</span>(df1, <span class="dt">amount=</span>y<span class="op">^</span><span class="dv">2</span><span class="op">+</span><span class="dv">10</span>, <span class="dt">perc=</span>y<span class="op">^</span><span class="dv">2</span><span class="op">*</span><span class="dv">100</span>)</span></code></pre></div>
-<pre><code>##   x           y     z  status   amount        perc
-## 1 a  1.02622379 FALSE    Open 11.05314 105.3135269
-## 2 b  0.06815488 FALSE  Closed 10.00465   0.4645088
-## 3 c  0.26604399  TRUE  Closed 10.07078   7.0779403
-## 4 d -0.96127002 FALSE    Open 10.92404  92.4040050
-## 5 e  0.61283067 FALSE Pending 10.37556  37.5561429</code></pre>
+<pre><code>##   x          y     z  status   amount       perc
+## 1 a  1.1044951 FALSE    Open 11.21991 121.990941
+## 2 b -1.1293638 FALSE  Closed 11.27546 127.546256
+## 3 c  1.2820363  TRUE  Closed 11.64362 164.361695
+## 4 d  0.3873631  TRUE    Open 10.15005  15.005019
+## 5 e -0.1749927 FALSE Pending 10.03062   3.062246</code></pre>
 <div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="kw">transmute</span>(df1, <span class="dt">amount=</span>y<span class="op">^</span><span class="dv">2</span><span class="op">+</span><span class="dv">10</span>, <span class="dt">perc=</span>y<span class="op">^</span><span class="dv">2</span><span class="op">*</span><span class="dv">100</span>) <span class="co"># use this if you want to only keep the new variables</span></span></code></pre></div>
-<pre><code>##     amount        perc
-## 1 11.05314 105.3135269
-## 2 10.00465   0.4645088
-## 3 10.07078   7.0779403
-## 4 10.92404  92.4040050
-## 5 10.37556  37.5561429</code></pre>
+<pre><code>##     amount       perc
+## 1 11.21991 121.990941
+## 2 11.27546 127.546256
+## 3 11.64362 164.361695
+## 4 10.15005  15.005019
+## 5 10.03062   3.062246</code></pre>
 <div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="kw">summarise</span>(df1, <span class="kw">max</span>(y))</span></code></pre></div>
 <pre><code>##     max(y)
-## 1 1.026224</code></pre>
+## 1 1.282036</code></pre>
 <div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="kw">sample_n</span>(df1, <span class="dv">2</span>)</span></code></pre></div>
-<pre><code>##   x          y     z  status
-## 1 b 0.06815488 FALSE  Closed
-## 2 e 0.61283067 FALSE Pending</code></pre>
+<pre><code>##   x         y     z status
+## 1 a 1.1044951 FALSE   Open
+## 2 d 0.3873631  TRUE   Open</code></pre>
 <p><br></p>
 <p><strong>Putting in all together using pipe %&gt;%</strong></p>
 <div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a>df1 <span class="op">%&gt;%</span></span>
 <span id="cb27-2"><a href="#cb27-2"></a><span class="st">  </span><span class="kw">mutate</span>(df1, <span class="dt">amount=</span>y<span class="op">^</span><span class="dv">2</span><span class="op">+</span><span class="dv">10</span>, <span class="dt">perc=</span>y<span class="op">^</span><span class="dv">2</span><span class="op">*</span><span class="dv">100</span>) <span class="op">%&gt;%</span></span>
 <span id="cb27-3"><a href="#cb27-3"></a><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">mean=</span><span class="kw">mean</span>(y), <span class="dt">total=</span><span class="kw">sum</span>(amount), <span class="dt">maximum=</span><span class="kw">max</span>(perc))</span></code></pre></div>
 <pre><code>##        mean    total  maximum
-## 1 0.2023967 52.42816 105.3135</code></pre>
+## 1 0.2939076 54.31966 164.3617</code></pre>
 <div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a>df1 <span class="op">%&gt;%</span></span>
 <span id="cb29-2"><a href="#cb29-2"></a><span class="st">  </span><span class="kw">select</span>(z, y) <span class="op">%&gt;%</span></span>
 <span id="cb29-3"><a href="#cb29-3"></a><span class="st">  </span><span class="kw">group_by</span>(z) <span class="op">%&gt;%</span></span>
@@ -729,8 +730,8 @@ div.tocify {
 <pre><code>## # A tibble: 2 x 2
 ##   z     `min(y)`
 ##   &lt;lgl&gt;    &lt;dbl&gt;
-## 1 FALSE   -0.961
-## 2 TRUE     0.266</code></pre>
+## 1 FALSE   -1.13 
+## 2 TRUE     0.387</code></pre>
 <p><br> <br></p>
 </div>
 </div>
