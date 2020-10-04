@@ -1,5 +1,5 @@
 ---
-title: "R Tutorial"
+title: "Beginning R"
 output:
   html_document:
     theme: sandstone

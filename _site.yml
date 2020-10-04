@@ -10,7 +10,7 @@ navbar:
     - text: "R Tutorial"
       menu:
         - text: "Basic"
-        - text: "Beginner Intro"
+        - text: "Beginning R"
           href: rtutorial_basic.html
         - text: "Statistics"
           href: page_b.html
@@ -27,6 +27,6 @@ navbar:
    
       
       
- # right:
-  #  - icon: fa-question fa-lg
-   #   href: https://example.com
+  right:
+    - icon: fa-github
+      href: https://github.com/shtan06/mozibite.git
