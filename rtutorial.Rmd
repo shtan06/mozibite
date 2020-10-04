@@ -15,7 +15,7 @@ output: html_document
 
 [Session 3 - Coding - Arithmetic Operators](RTutorial_03_Coding-Arithmetic-Operators.html)  
 
-[Session 4 - Coding - Operators, Vectors, Matrices and Lists](RTutorial_4_Coding-Operators-Vectors-Matrices-Lists.html)  
+[Session 4 - Coding - Operators, Vectors, Matrices and Lists](RTutorial_04_Coding-Operators-Vectors-Matrices-Lists.html)  
 
 [Session 5 - Coding - Data Frames](RTutorial_05_Coding-Data-Frames.html)  
 
