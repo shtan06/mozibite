@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Estimated Duration: 20 minutes" />
+
+
+<title>Session Three (b): Coding - Operators, Vectors, Matrices and Lists</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/sandstone.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+
+.sourceCode .row {
+  width: 100%;
+}
+.sourceCode {
+  overflow-x: auto;
+}
+.code-folding-btn {
+  margin-right: -30px;
+}
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 61px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h2 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h3 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h4 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h5 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h6 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">mozibite</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+<li>
+  <a href="rtutorial.html">R Tutorial</a>
+</li>
+<li>
+  <a href="blogs.html">Blog</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">Session Three (b): Coding - Operators, Vectors, Matrices and Lists</h1>
+<h4 class="author">Estimated Duration: 20 minutes</h4>
+
+</div>
+
+
+<p><br></p>
+<div id="section" class="section level1 tabset">
+<h1></h1>
+<div id="operators" class="section level2">
+<h2>1. Operators</h2>
+<div id="part-1-operators" class="section level3">
+<h3><strong>Part 1: Operators</strong></h3>
+<p><br></p>
+<div id="relational-operators" class="section level4">
+<h4>Relational Operators</h4>
+<p>These boolean expressions make comparisons between values that results in TRUE or FALSE.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Operator</th>
+<th>Description</th>
+<th>Example</th>
+<th>Results</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>&gt;</td>
+<td>Greater than</td>
+<td><code>5&gt;2</code></td>
+<td>TRUE</td>
+</tr>
+<tr class="even">
+<td>&lt;</td>
+<td>Less than</td>
+<td><code>"A"&lt;"a"</code></td>
+<td>FALSE</td>
+</tr>
+<tr class="odd">
+<td>==</td>
+<td>Equal to</td>
+<td><code>1+2==3</code> <code>"X"=="Y"</code></td>
+<td>TRUE FALSE</td>
+</tr>
+<tr class="even">
+<td>!=</td>
+<td>Not equal to</td>
+<td><code>10!=20</code></td>
+<td>TRUE</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+</div>
+<div id="logical-operators" class="section level4">
+<h4>Logical Operators</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Operator</th>
+<th>Description</th>
+<th>Example</th>
+<th>Results</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>&amp;</td>
+<td>And</td>
+<td><code>"A"=="B" &amp; 10==10</code></td>
+<td>FALSE</td>
+</tr>
+<tr class="even">
+<td><code>|</code></td>
+<td>Or</td>
+<td><code>"A"=="B" | 10==10</code></td>
+<td>TRUE</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+</div>
+<div id="assignment-operators" class="section level4">
+<h4>Assignment Operators</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Operator</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>&lt;- or =</td>
+<td>Assignment (keyboard shortcut alt+-)</td>
+<td><code>x &lt;- 20</code></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><code>y &lt;- 12+3</code></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td><code>z &lt;- x+y</code></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><code>colour &lt;- "silver"</code></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td><code>temp &lt;- c("cold","hot")</code></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><code>mix &lt;- c(z,colour, temp)</code></td>
+</tr>
+<tr class="odd">
+<td>&lt;&lt;-</td>
+<td>Global assignment</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Assigning variables:</strong></p>
+<ul>
+<li>Can contain letters, numbers, dots and underscore but can’t start with a number or a dot followed by a number.<br />
+</li>
+<li>Can be written as assign(“x”,20) or assign(“x”,20,globalenv()) for local and global assignment, but this is rarely used.<br />
+</li>
+<li>To assign a value and print it all in one line, for example:
+<ul>
+<li>z &lt;- rnorm(5);z<br />
+</li>
+<li>(z &lt;- rnorm(5))</li>
+</ul></li>
+</ul>
+<p><br> <br></p>
+</div>
+</div>
+</div>
+<div id="vectors" class="section level2">
+<h2>2. Vectors</h2>
+<div id="part-2-vectors" class="section level3">
+<h3><strong>Part 2: Vectors</strong></h3>
+<p><br></p>
+<p>A vector is a one-dimensional data structure that contains a array of data elements (or components) of the same type.</p>
+<p><br></p>
+<div id="concatenate" class="section level4">
+<h4>Concatenate</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>c("hello", "world")</code></td>
+<td>hello, world!</td>
+</tr>
+<tr class="even">
+<td><code>c(1,2,3,4,5)</code></td>
+<td>1, 2, 3, 4, 5</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+</div>
+<div id="sequence" class="section level4">
+<h4>Sequence</h4>
+<table>
+<colgroup>
+<col width="53%" />
+<col width="46%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>1:10</code></td>
+<td>1, 2, 3, 4, 5, 6, 7, 8, 9, 10</td>
+</tr>
+<tr class="even">
+<td><code>20:15</code></td>
+<td>20, 19, 18, 17, 16, 15</td>
+</tr>
+<tr class="odd">
+<td><code>c(1:5,(5:1)^2)</code></td>
+<td>1, 2, 3, 4, 5, 25, 16, 9, 4, 1</td>
+</tr>
+<tr class="even">
+<td><code>10+5:10</code></td>
+<td>15, 16, 17, 18, 19, 20</td>
+</tr>
+<tr class="odd">
+<td><code>1-(1:10)</code></td>
+<td>0, -1, -2, -3, -4, -5, -6, -7, -8, -9</td>
+</tr>
+<tr class="even">
+<td><code>1:5+1:10</code></td>
+<td>2, 4, 6, 8, 10, 7, 9, 11, 13, 15</td>
+</tr>
+<tr class="odd">
+<td><code>seq(-2,8)</code> same as -2:8</td>
+<td>-2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8</td>
+</tr>
+<tr class="even">
+<td><code>seq(2,20,2)</code></td>
+<td>2, 4, 6, 8, 10, 12, 14, 16, 18, 20</td>
+</tr>
+<tr class="odd">
+<td><code>seq.int(2:20, by=2, length.out=8)</code></td>
+<td>2, 4, 6, 8, 10, 12, 14, 16</td>
+</tr>
+<tr class="even">
+<td><code>letters[]</code></td>
+<td>a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z</td>
+</tr>
+<tr class="odd">
+<td><code>LETTERS[3:8]</code></td>
+<td>C, D, E, F, G, H</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+</div>
+<div id="repeat" class="section level4">
+<h4>Repeat</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>rep("Hello",3)</code></td>
+<td>Hello, Hello, Hello</td>
+</tr>
+<tr class="even">
+<td><code>rep(1:3,3)</code></td>
+<td>1, 2, 3, 1, 2, 3, 1, 2, 3</td>
+</tr>
+<tr class="odd">
+<td><code>rep(1:3, each=3)</code></td>
+<td>1, 1, 1, 2, 2, 2, 3, 3, 3</td>
+</tr>
+<tr class="even">
+<td><code>rep(1:3, times=1:3)</code></td>
+<td>1, 2, 2, 3, 3, 3</td>
+</tr>
+<tr class="odd">
+<td><code>rep(1:10, length.out=6)</code> or rep_len(1:10,6)</td>
+<td>1, 2, 3, 4, 5, 6</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+</div>
+<div id="lengths" class="section level4">
+<h4>Lengths</h4>
+<p>Number of elements in the vector.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>length(1:12)</code></td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td><code>length(c("A","B","C","D","E","F"))</code></td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+</div>
+<div id="character-size" class="section level4">
+<h4>Character Size</h4>
+<p>Counts the number of characters in each element</p>
+<table>
+<thead>
+<tr class="header">
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>nchar(c("Gold","Silver","Bronze"))</code></td>
+<td>4, 6, 6</td>
+</tr>
+<tr class="even">
+<td><code>nchar(100*100)</code></td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+</div>
+<div id="names" class="section level4">
+<h4>Names</h4>
+<p>Names each element in the vector</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">c</span>(<span class="dt">Gold=</span><span class="dv">1</span>, <span class="dt">Silver=</span><span class="dv">2</span>, <span class="dt">Bronze=</span><span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span></code></pre></div>
+<pre><code>##   Gold Silver Bronze               
+##      1      2      3      4      5</code></pre>
+<p><br></p>
+</div>
+<div id="indexing" class="section level4">
+<h4>Indexing</h4>
+<p>Accesses elements in the vector</p>
+<table>
+<thead>
+<tr class="header">
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>seq(10,100,5)[6]</code></td>
+<td>35</td>
+</tr>
+<tr class="even">
+<td><code>x &lt;- c("A","B","C","D","E","F")</code></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>x[c(1,3,6)]</code> include</td>
+<td>A, C, F</td>
+</tr>
+<tr class="even">
+<td><code>x[c(-1,-5,-6)]</code> exclude (don’t mix +ve and -ve)</td>
+<td>B, C, D</td>
+</tr>
+<tr class="odd">
+<td><code>x[c(T,F,T,F,T,F)]</code></td>
+<td>A, C, E</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+</div>
+<div id="locate-index-position" class="section level4">
+<h4>Locate Index Position</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>y &lt;- c(10:18,15,0,20)</code></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>which(y==15)</code></td>
+<td>6, 10</td>
+</tr>
+<tr class="odd">
+<td><code>which(y&gt;14)</code></td>
+<td>6, 7, 8, 9, 10, 12</td>
+</tr>
+<tr class="even">
+<td><code>which.min(y)</code></td>
+<td>11</td>
+</tr>
+<tr class="odd">
+<td><code>which.max(y)</code></td>
+<td>12</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">which</span>(y<span class="op">==</span><span class="dv">13</span> <span class="op">|</span><span class="st"> </span>y<span class="op">==</span><span class="dv">17</span>)</span></code></pre></div>
+<pre><code>## [1] 4 8</code></pre>
+<p><br></p>
+</div>
+<div id="replace-values" class="section level4">
+<h4>Replace Values</h4>
+<p>Example<br />
+<code>x[c(2,5)]="Z"</code> <br><br></p>
+<p><code>replace(x,3,9)</code> replaces the third element in vector x with the value 9. If vector has only 5 elements for example, then <code>replace(x,20,11)</code> creates 14 new “NA” values and the value 11 for the 20th element. Note that this function does not change or replace the original values in variable x.</p>
+<p><br></p>
+</div>
+<div id="comparing-values-and-vectors" class="section level4">
+<h4>Comparing Values and Vectors</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>identical("book","Book")</code></td>
+<td>FALSE</td>
+</tr>
+<tr class="even">
+<td><code>identical(2^3,2**3)</code></td>
+<td>TRUE</td>
+</tr>
+</tbody>
+</table>
+<p><code>identical(a,b,c)</code> compares all elements in the 3 vectors<br />
+<br></p>
+<p><code>%in%</code> checks if value exists in a vector</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="dv">13</span> <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="dv">8</span><span class="op">|</span><span class="dv">12</span> <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<p><br></p>
+</div>
+<div id="vector-check" class="section level4">
+<h4>Vector Check</h4>
+<p>Function to check is is.vector(y). A single element is also a vector</p>
+<table>
+<thead>
+<tr class="header">
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>is.vector(c(1,2,3,4))</code></td>
+<td>TRUE</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+</div>
+<div id="vector-function" class="section level4">
+<h4>Vector Function</h4>
+<p>vector(mode, length) creates a vector of specified type and length but no values.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>vector("character",5)</code></td>
+<td>, , , ,</td>
+</tr>
+<tr class="even">
+<td><code>vector("numeric",5)</code></td>
+<td>0, 0, 0, 0, 0</td>
+</tr>
+<tr class="odd">
+<td><code>vector("logical",5)</code></td>
+<td>FALSE, FALSE, FALSE, FALSE, FALSE</td>
+</tr>
+<tr class="even">
+<td><code>s &lt;- vector("numeric",5)</code></td>
+<td>Example, assign a new vector s</td>
+</tr>
+<tr class="odd">
+<td><code>s</code></td>
+<td>0, 0, 0, 0, 0</td>
+</tr>
+<tr class="even">
+<td><code>s+2</code></td>
+<td>2, 2, 2, 2, 2</td>
+</tr>
+<tr class="odd">
+<td><code>s+c(5,6,7,8,9)</code></td>
+<td>5, 6, 7, 8, 9</td>
+</tr>
+</tbody>
+</table>
+<p><br> <br></p>
+</div>
+</div>
+</div>
+<div id="matrices" class="section level2">
+<h2>3. Matrices</h2>
+<div id="part-3-matrices" class="section level3">
+<h3><strong>Part 3: Matrices</strong></h3>
+<p><br></p>
+<p>Matrices are two-dimensional arrays. There are two ways to create a matrix.</p>
+<p><br></p>
+<div id="create-a-matrix" class="section level4">
+<h4>Create a Matrix</h4>
+<p><strong>Method 1:</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>First, create a vector</li>
+</ol>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>matrix1 &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">5</span>,<span class="dv">100</span>,<span class="dv">5</span>); matrix1</span></code></pre></div>
+<pre><code>##  [1]   5  10  15  20  25  30  35  40  45  50  55  60  65  70  75  80  85  90  95
+## [20] 100</code></pre>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Then turn the vector into a 2-D matrix</li>
+</ol>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw">dim</span>(matrix1) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">4</span>);matrix1</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    5   30   55   80
+## [2,]   10   35   60   85
+## [3,]   15   40   65   90
+## [4,]   20   45   70   95
+## [5,]   25   50   75  100</code></pre>
+<p>Use t() to transpose the matrix</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw">t</span>(matrix1)</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5]
+## [1,]    5   10   15   20   25
+## [2,]   30   35   40   45   50
+## [3,]   55   60   65   70   75
+## [4,]   80   85   90   95  100</code></pre>
+<p><br></p>
+<p><strong>Method 2:</strong></p>
+<p>Use the matrix() function</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>matrix2 &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">seq</span>(<span class="dv">5</span>,<span class="dv">100</span>,<span class="dv">5</span>), <span class="dt">nrow=</span><span class="dv">5</span>); matrix2</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    5   30   55   80
+## [2,]   10   35   60   85
+## [3,]   15   40   65   90
+## [4,]   20   45   70   95
+## [5,]   25   50   75  100</code></pre>
+<p>or, to fill matrix by row</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>matrix2 &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">seq</span>(<span class="dv">5</span>,<span class="dv">100</span>,<span class="dv">5</span>), <span class="dt">nrow=</span><span class="dv">5</span>, <span class="dt">byrow=</span>T); matrix2</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    5   10   15   20
+## [2,]   25   30   35   40
+## [3,]   45   50   55   60
+## [4,]   65   70   75   80
+## [5,]   85   90   95  100</code></pre>
+<p>To give rows and columns a name</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>matrix2 &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">seq</span>(<span class="dv">5</span>,<span class="dv">100</span>,<span class="dv">5</span>), <span class="dt">nrow=</span><span class="dv">5</span>, <span class="dt">byrow=</span>T,</span>
+<span id="cb19-2"><a href="#cb19-2"></a>                  <span class="dt">dimnames =</span> <span class="kw">list</span>(<span class="kw">c</span>(<span class="st">&quot;r1&quot;</span>,<span class="st">&quot;r2&quot;</span>,<span class="st">&quot;r3&quot;</span>,<span class="st">&quot;r4&quot;</span>,<span class="st">&quot;r5&quot;</span>),<span class="kw">c</span>(<span class="st">&quot;c1&quot;</span>,<span class="st">&quot;c2&quot;</span>,<span class="st">&quot;c3&quot;</span>,<span class="st">&quot;c4&quot;</span>)))</span>
+<span id="cb19-3"><a href="#cb19-3"></a>matrix2</span></code></pre></div>
+<pre><code>##    c1 c2 c3  c4
+## r1  5 10 15  20
+## r2 25 30 35  40
+## r3 45 50 55  60
+## r4 65 70 75  80
+## r5 85 90 95 100</code></pre>
+<p><br></p>
+</div>
+<div id="indexing-and-attributes" class="section level4">
+<h4>Indexing and Attributes</h4>
+<p>To search by index</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>matrix2[<span class="dv">2</span>,<span class="dv">3</span>]</span></code></pre></div>
+<pre><code>## [1] 35</code></pre>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>matrix2[<span class="st">&quot;r1&quot;</span>,<span class="kw">c</span>(<span class="st">&quot;c1&quot;</span>,<span class="st">&quot;c4&quot;</span>)]</span></code></pre></div>
+<pre><code>## c1 c4 
+##  5 20</code></pre>
+<p>Check the class of matrix</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="kw">class</span>(matrix2)</span></code></pre></div>
+<pre><code>## [1] &quot;matrix&quot;</code></pre>
+<p>To return the number of rows and columns</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="kw">nrow</span>(matrix2)</span></code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="kw">ncol</span>(matrix2)</span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<p>To return the number of components in the matrix</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="kw">length</span>(matrix2)</span></code></pre></div>
+<pre><code>## [1] 20</code></pre>
+<p><br></p>
+</div>
+<div id="sum-and-mean" class="section level4">
+<h4>Sum and Mean</h4>
+<p>To calculate sum and mean of columns and rows</p>
+<p><br></p>
+<table>
+<thead>
+<tr class="header">
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>colSums(matrix2)</code></td>
+<td>225, 250, 275, 300</td>
+</tr>
+<tr class="even">
+<td><code>colMeans(matrix2)</code></td>
+<td>45, 50, 55, 60</td>
+</tr>
+<tr class="odd">
+<td><code>rowSums(matrix2)</code></td>
+<td>50, 130, 210, 290, 370</td>
+</tr>
+<tr class="even">
+<td><code>rowMeans(matrix2)</code></td>
+<td>12.5, 32.5, 52.5, 72.5, 92.5</td>
+</tr>
+</tbody>
+</table>
+<p><br> <br></p>
+</div>
+</div>
+</div>
+<div id="lists" class="section level2">
+<h2>4. Lists</h2>
+<div id="part-4-lists" class="section level3">
+<h3><strong>Part 4: Lists</strong></h3>
+<p>A list is a vector that can contain different type of elements. You can name the list during or after construction.</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a>list_a &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>),<span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">12</span>,<span class="dt">nrow=</span><span class="dv">3</span>),<span class="kw">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;c&quot;</span>));list_a</span></code></pre></div>
+<pre><code>## [[1]]
+## [1] 1 2 3 4 5
+## 
+## [[2]]
+##      [,1] [,2] [,3] [,4]
+## [1,]    1    4    7   10
+## [2,]    2    5    8   11
+## [3,]    3    6    9   12
+## 
+## [[3]]
+## [1] &quot;a&quot; &quot;b&quot; &quot;c&quot;</code></pre>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="kw">names</span>(list_a) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;numeric&quot;</span>, <span class="st">&quot;matrix&quot;</span>, <span class="st">&quot;character&quot;</span>);list_a <span class="co"># name the elements</span></span></code></pre></div>
+<pre><code>## $numeric
+## [1] 1 2 3 4 5
+## 
+## $matrix
+##      [,1] [,2] [,3] [,4]
+## [1,]    1    4    7   10
+## [2,]    2    5    8   11
+## [3,]    3    6    9   12
+## 
+## $character
+## [1] &quot;a&quot; &quot;b&quot; &quot;c&quot;</code></pre>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="co"># During construction:</span></span>
+<span id="cb37-2"><a href="#cb37-2"></a>  <span class="co"># list_a &lt;- list(</span></span>
+<span id="cb37-3"><a href="#cb37-3"></a>      <span class="co"># numeric = c(1,2,3,4,5),</span></span>
+<span id="cb37-4"><a href="#cb37-4"></a>      <span class="co"># matrix = matrix(1:12,nrow=3),</span></span>
+<span id="cb37-5"><a href="#cb37-5"></a>      <span class="co"># character = c(&quot;a&quot;,&quot;b&quot;,&quot;c&quot;))</span></span>
+<span id="cb37-6"><a href="#cb37-6"></a></span>
+<span id="cb37-7"><a href="#cb37-7"></a>list_a[<span class="dv">2</span>] <span class="co"># filter lists using index</span></span></code></pre></div>
+<pre><code>## $matrix
+##      [,1] [,2] [,3] [,4]
+## [1,]    1    4    7   10
+## [2,]    2    5    8   11
+## [3,]    3    6    9   12</code></pre>
+<p><br></p>
+<ul>
+<li>Use NULL to remove elements of a list, eg. list_a[3] &lt;- NULL removes the third element.<br />
+</li>
+<li>To replace existing element: list_a[1] &lt;- list(c(6,7,8,9,10)) replaces the values in the first element.<br />
+</li>
+<li>Another example is list_a[1] &lt;- list(NULL) to replace existing element to NULL instead of removing it.</li>
+</ul>
+<p><br> <br></p>
+</div>
+</div>
+<div id="object-and-variables" class="section level2">
+<h2>5. Object and Variables</h2>
+<div id="part-5-object-and-variable-types" class="section level3">
+<h3><strong>Part 5: Object and Variable Types</strong></h3>
+<p><br></p>
+<table>
+<colgroup>
+<col width="42%" />
+<col width="57%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>class()</code></td>
+<td>Checks variable types eg. numeric, character, integer, logical, complex, etc.</td>
+</tr>
+<tr class="even">
+<td><code>is.</code></td>
+<td>Checks if objects belong to a class, for example, <code>is.character()</code>, <code>is.vector()</code>, <code>is.data.frame()</code>, <code>is.matrix()</code>, <code>is.matrix()</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>ls</code></td>
+<td>shows complete list of all the functions that match a value in a specified environment. For example, <code>ls(pattern="^is", baseenv())</code> shows all functions that start with “is” and <code>ls(pattern="sum", baseenv())</code> shows all functions that contain the letters “sum”.</td>
+</tr>
+<tr class="even">
+<td><code>as.</code> or <code>as()</code></td>
+<td>Changes type of data. For example, <code>x &lt;- "123.45"</code>. <code>as.numeric(x)</code> or <code>as(x,"numeric)</code> displays results in numeric format. Note that the variable x still holds the original value as character.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("show" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4,h5",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

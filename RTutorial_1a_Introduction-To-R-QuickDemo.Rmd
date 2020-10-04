@@ -1,0 +1,41 @@
+---
+title: "Session One: Introduction to R - Quick Demo"
+author: "Import, Transform, Code, Plot and Publish with R and RStudio"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r echo=FALSE}
+library(ggplot2)
+library(reshape2)
+library(readxl)
+
+#Import Data into ae_pop dataset
+ae_pop <- read_xlsx("/cloud/project/files/World_Population.xlsx", sheet = "Asia-Europe")
+
+# Transform Data Structure
+ae_pop <- melt(ae_pop) # rehapes the table
+colnames(ae_pop) <- c("Region", "Year", "Population") # re-name columns
+
+# Plot a Graph 1
+ggplot(ae_pop, aes(x=Year, y=Population, fill=Region))+
+  geom_point(aes(color=Region))+
+  scale_x_discrete(labels = NULL)+
+  scale_y_discrete(labels=NULL)
+
+# Create a new data frame and plot a pie chart
+ae_pop1 <- ae_pop[ae_pop$Year==2020,c(1,3)] # re-arrange columns
+
+ggplot(ae_pop1, aes(x="", y=Population, fill=Region))+
+  geom_bar(stat="identity")+
+  coord_polar("y",start=0)
+
+# Summarise some data
+summary(ae_pop)
+
+# Knit this file to send output to PDF (need to install LaTex first)
+
+```

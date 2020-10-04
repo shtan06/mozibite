@@ -1,0 +1,99 @@
+---
+title: "Session Seven: R Markdown"
+author: "Estimated Duration: 40 minutes"
+output:
+  html_document: 
+    code_folding: show
+    highlight: tango
+    number_sections: no
+    theme: sandstone
+    toc: yes
+    toc_depth: 5
+    toc_float:
+      collapsed: no
+      smooth_scroll: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+<br>
+
+# {.tabset}
+
+## R Markdown File
+
+### __R Markdown File__
+
+<br>
+
+#### Create RMarkdown File
+
+In RStudio, go to File > New File > RMarkdown  
+
+Work on the template that comes with the new file.  
+Refer to RMarkdown __cheatsheet__.
+
+<br>
+
+## Tables
+
+### __Tables__
+
+<br>
+
+#### Standard RMarkdown Table
+
+Example below displays table with `df_print: paged` defined in YAML  
+Other df_print options are `default`, `kable` and `tibbl`  
+
+```{r}
+
+df1 <- data.frame(x=letters[1:5], y=rnorm(5), z=runif(5)>0.5, status=factor(c("Open","Closed","Closed","Open","Pending")))
+df1
+```
+
+<br>
+
+#### DT Data Table
+
+Install and load DT package
+
+```{r}
+library(DT)
+datatable(df1)
+```
+
+For more info on DT, go to https://rstudio.github.io/DT/
+
+<br>
+
+#### kableExtra
+
+Install and load kableExtra
+
+```{r}
+library(kableExtra)
+
+df1[2:4]%>% # columns 2 to 4
+  kbl()%>%
+  kable_paper(full_width=F, "striped") %>%
+  column_spec(2, width="8em", background="yellow") %>%
+  pack_rows("Group 1",1,2,label_row_css = "background-color: #666; color: #fff;") %>%
+  pack_rows("Group 2",3,5,label_row_css = "background-color: #666; color: #fff;")
+```
+https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html  
+
+<br>
+
+#### formattable
+Install and load formattable  
+
+```{r}
+library(formattable)
+
+formattable(df1,  list(`Indicator Name` = formatter("span", style = ~ style(color = "grey", font.weight = "bold")), `y` = color_bar("#FA614B")))
+```
+
+<br>
+<br>

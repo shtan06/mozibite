@@ -9,9 +9,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="Estimated Duration: 20 minutes" />
 
 
-<title>R Tutorial</title>
+<title>Session Three (a): Coding - Arithmetic Operators and Functions</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -295,27 +296,315 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">R Tutorial</h1>
+<h1 class="title toc-ignore">Session Three (a): Coding - Arithmetic Operators and Functions</h1>
+<h4 class="author">Estimated Duration: 20 minutes</h4>
 
 </div>
 
 
 <p><br></p>
-<p><em>Last Updated: 5 Oct 2020</em></p>
+<div id="arithmetic-operators-and-functions" class="section level2">
+<h2>Arithmetic Operators and Functions</h2>
 <p><br></p>
-<p><a href="RTutorial_1_Introduction-to-R.html">Session 1 - Introduction to R</a></p>
-<p><a href="RTutorial_2_The-RStudio-Environment.html">Session 2 - The R Environment</a></p>
-<p><a href="RTutorial_3_Coding-Arithmetic-Operators.html">Session 3 - Coding - Arithmetic Operators</a></p>
-<p><a href="RTutorial_4_Coding-Operators-Vectors-Matrices-Lists.html">Session 4 - Coding - Operators, Vectors, Matrices and Lists</a></p>
-<p><a href="RTutorial_5_Coding-Data-Frames.html">Session 5 - Coding - Data Frames</a></p>
-<p><a href="RTutorial_6_Loops-and-Functions.html">Session 6 - Coding - Loops and Functions</a></p>
-<p><a href="RTutorial_7_Coding-Formatting.html">Session 7 - Coding - Formatting</a></p>
-<p><a href="RTutorial_8_Graphs.html">Session 8 - Graphs</a></p>
-<p><a href="RTutorial_9_Accessing-Data.html">Session 9 - Accessing Data</a></p>
-<p><a href="RTutorial_10_dplyr.html">Session 10 - dplyr</a></p>
-<p><a href="RTutorial_11_RMarkdown.html">Session 11 - R Markdown</a></p>
-<p><a href="RTutorial_12_Flexdashboard-htmlwidgets-Shiny.html">Session 12 - Flex Dashboard, htmlwidgets and Shiny</a></p>
-<p><a href="RTutorial_13_RMarkdown-Websites-and-Github.html">Session 13 - R Markdown Websites and Github</a></p>
+<div id="operators" class="section level4">
+<h4>Operators</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Operator</th>
+<th>Description</th>
+<th>Example</th>
+<th>Results</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>+</td>
+<td>Add</td>
+<td><code>5+3</code></td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>-</td>
+<td>Subtract</td>
+<td><code>8-6</code></td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>*</td>
+<td>Multiply</td>
+<td><code>4*2</code></td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>/</td>
+<td>Divide</td>
+<td><code>9/3</code></td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>^ or **</td>
+<td>Exponent</td>
+<td><code>2^3</code></td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>%%</td>
+<td>Remainder after division (mod)</td>
+<td><code>10%%3</code></td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>%/%</td>
+<td>Integer division</td>
+<td><code>10%/%3</code>, <code>6.8%/%1</code></td>
+<td>3 , 6</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+</div>
+<div id="arithmetic" class="section level4">
+<h4>Arithmetic</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Description</th>
+<th>Example</th>
+<th>Results</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>sqrt</td>
+<td>Square root</td>
+<td><code>sqrt(36)</code></td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>abs</td>
+<td>Absolute</td>
+<td><code>abs(-6)</code></td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<td>factorial(x)</td>
+<td>Factorial</td>
+<td><code>factorial(4)</code></td>
+<td>24</td>
+</tr>
+<tr class="even">
+<td>round(x,d.p.)</td>
+<td>Round</td>
+<td><code>round(pi,6)</code></td>
+<td>3.141593</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+</div>
+<div id="constants" class="section level4">
+<h4>Constants</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Description</th>
+<th>Example</th>
+<th>Results</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>pi</td>
+<td>pi</td>
+<td><code>pi+0</code></td>
+<td>3.1415927</td>
+</tr>
+<tr class="even">
+<td>exp</td>
+<td>e</td>
+<td><code>exp(1)</code></td>
+<td>2.7182818</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+</div>
+<div id="logarithm" class="section level4">
+<h4>Logarithm</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Description</th>
+<th>Example</th>
+<th>Results</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>log(x,base)</td>
+<td>log</td>
+<td><code>log(9,3)</code></td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>log10()</td>
+<td>log base 10</td>
+<td><code>log10(1000)</code></td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>log()</td>
+<td>natural log base e</td>
+<td><code>log(30)</code></td>
+<td>3.4011974</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+</div>
+<div id="trigonometry" class="section level4">
+<h4>Trigonometry</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Description</th>
+<th>Example</th>
+<th>Results</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>sin(x)</td>
+<td>Sin</td>
+<td><code>sin(0.68)</code></td>
+<td>0.628793</td>
+</tr>
+<tr class="even">
+<td>cos(x)</td>
+<td>Cos</td>
+<td><code>cos(0.68)</code></td>
+<td>0.7775727</td>
+</tr>
+<tr class="odd">
+<td>tan(x)</td>
+<td>Tan</td>
+<td><code>tan(0.68)</code></td>
+<td>0.8086614</td>
+</tr>
+</tbody>
+</table>
+<p>Note: x is in radians</p>
+<p><br></p>
+</div>
+<div id="statistics" class="section level4">
+<h4>Statistics</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Description</th>
+<th>Example</th>
+<th>Results</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>max(x)</td>
+<td>Maximum</td>
+<td><code>max(c(5,9,-3,12,7,4))</code></td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>min(x)</td>
+<td>Minimum</td>
+<td><code>min(c(5,9,-3,12,7,4))</code></td>
+<td>-3</td>
+</tr>
+<tr class="odd">
+<td>sum(x)</td>
+<td>Sum</td>
+<td><code>sum(c(7,6,8,5,9))</code></td>
+<td>35</td>
+</tr>
+<tr class="even">
+<td>mean(x)</td>
+<td>Mean</td>
+<td><code>mean(c(7,6,8,5,9))</code></td>
+<td>7</td>
+</tr>
+<tr class="odd">
+<td>median(x)</td>
+<td>Median</td>
+<td><code>median(c(7,6,8,5,9))</code></td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td>var(x)</td>
+<td>Variance</td>
+<td><code>var(c(7,6,8,5,9))</code></td>
+<td>2.5</td>
+</tr>
+<tr class="odd">
+<td>sd(x)</td>
+<td>Standard deviation</td>
+<td><code>sd(c(7,6,8,5,9))</code></td>
+<td>1.5811388</td>
+</tr>
+<tr class="even">
+<td>sample(x, size, replace)</td>
+<td>Random sample</td>
+<td><code>sample(10,5,TRUE)</code></td>
+<td>2, 6, 6, 7, 2</td>
+</tr>
+<tr class="odd">
+<td>choose(n,r)</td>
+<td>Combination</td>
+<td><code>choose(5,3)</code></td>
+<td>10</td>
+</tr>
+<tr class="even">
+<td>runif(n, min, max)</td>
+<td>Uniform random number</td>
+<td><code>runif(2,1,5)</code></td>
+<td>1.7372197, 4.1695401</td>
+</tr>
+<tr class="odd">
+<td>rnorm(n, mean, sd)</td>
+<td>Normal random number</td>
+<td><code>rnorm(2)</code></td>
+<td>0.2399576, -0.165174</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+</div>
+<div id="calculus" class="section level4">
+<h4>Calculus</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Description</th>
+<th>Example</th>
+<th>Results</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>D(expression(f(x),‘x’)</td>
+<td>Differentiation</td>
+<td><code>D(expression(2*x),'x')</code></td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 
 
 

@@ -5,8 +5,32 @@ output: html_document
 
 <br>
 
-Last Updated: 5 Oct 2020
+*Last Updated: 5 Oct 2020*
 
-[Session 1 - Introduction to R](RTutorial_s1_Introduction_to_R.html)  
+<br>
 
-[Session 2 - The R Environment](RTutorial_s2_The_RStudio_Environment.html)  
+[Session 1 - Introduction to R](RTutorial_1_Introduction-to-R.html)  
+
+[Session 2 - The R Environment](RTutorial_2_The-RStudio-Environment.html)  
+
+[Session 3 - Coding - Arithmetic Operators](RTutorial_3_Coding-Arithmetic-Operators.html)  
+
+[Session 4 - Coding - Operators, Vectors, Matrices and Lists](RTutorial_4_Coding-Operators-Vectors-Matrices-Lists.html)  
+
+[Session 5 - Coding - Data Frames](RTutorial_5_Coding-Data-Frames.html)  
+
+[Session 6 - Coding - Loops and Functions](RTutorial_6_Loops-and-Functions.html)  
+
+[Session 7 - Coding - Formatting](RTutorial_7_Coding-Formatting.html)  
+
+[Session 8 - Graphs](RTutorial_8_Graphs.html)  
+
+[Session 9 - Accessing Data](RTutorial_9_Accessing-Data.html)  
+
+[Session 10 - dplyr](RTutorial_10_dplyr.html)  
+
+[Session 11 - R Markdown](RTutorial_11_RMarkdown.html)  
+
+[Session 12 - Flex Dashboard, htmlwidgets and Shiny](RTutorial_12_Flexdashboard-htmlwidgets-Shiny.html)  
+
+[Session 13 - R Markdown Websites and Github ](RTutorial_13_RMarkdown-Websites-and-Github.html)  
