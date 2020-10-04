@@ -37,3 +37,6 @@ output:
 [Session 12 - Flex Dashboard, htmlwidgets and Shiny](RTutorial_12_Flexdashboard-htmlwidgets-Shiny.html)  
 
 [Session 13 - R Markdown Websites and Github](RTutorial_13_RMarkdown-Websites-and-Github.html)  
+
+[Session 14 - Creating Packages](RTutorial_14_Creating-Packages.html). 
+
