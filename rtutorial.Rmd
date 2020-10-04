@@ -33,4 +33,7 @@ output: html_document
 
 [Session 12 - Flex Dashboard, htmlwidgets and Shiny](RTutorial_12_Flexdashboard-htmlwidgets-Shiny.html)  
 
-[Session 13 - R Markdown Websites and Github ](RTutorial_13_RMarkdown-Websites-and-Github.html)  
+[Session 13 - R Markdown Websites and Github](RTutorial_13_RMarkdown-Websites-and-Github.html)  
+
+[Test 1](Arithmetic-Operators.html)  
+[Test 2](Introduction-to-R.html) 
