@@ -3,4 +3,4 @@ title: "Tiny Bites"
 output: html_document
 ---
 
-Welcome to mozibite. *Unfortunately, as you read this, this site is __under construction__*. This is a simple website that brings concise information to non-technical readers who are beginning their journey into data exploration.
+Welcome to mozibite. This is a simple website that brings concise information to non-technical readers who are beginning their journey into data exploration.

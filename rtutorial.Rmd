@@ -3,6 +3,8 @@ title: "R Tutorial"
 output: html_document
 ---
 
+<br>
+
 Last Updated: 5 Oct 2020
 
 [Session 1 - Introduction to R](2020-06-05_flask_install_anaconda.html)  
