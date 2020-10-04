@@ -35,5 +35,6 @@ output: html_document
 
 [Session 13 - R Markdown Websites and Github](RTutorial_13_RMarkdown-Websites-and-Github.html)  
 
-[Test 1](Arithmetic-Operators.html)  
-[Test 2](Introduction-to-R.html) 
+[Session 14 Test 1](Arithmetic-Operators.html)  
+
+[Session 15 Test 2](Introduction-to-R.html) 
