@@ -38,5 +38,5 @@ output:
 
 [Session 13 - R Markdown Websites and Github](RTutorial_13_RMarkdown-Websites-and-Github.html)  
 
-[Session 14 - Creating Packages](RTutorial_14_Creating-Packages.html). 
+[Session 14 - Creating Packages](RTutorial_14_Creating-Packages.html)  
 
