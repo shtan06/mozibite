@@ -1,0 +1,59 @@
+library(htmlwidgets)
+install.packages("leaflet")
+leaflet() %>%
+addTtiles() %>%
+addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")
+library(magrittr)
+leaflet() %>%
+addTtiles() %>%
+addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")
+library(leaflet)
+detach("package:magrittr", unload = TRUE)
+leaflet() %>%
+addTtiles() %>%
+addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")
+leaflet() %>%
+addTiles() %>%
+addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")
+leaflet() %>%
+addTiles() %>%
+addMarkers(lng=101.47, lat=3.42, popup="The birthplace of R")
+leaflet() %>%
+addTiles() %>%
+addMarkers(lng=101.42, lat=3.09, popup="The birthplace of R")
+leaflet() %>%
+addTiles() %>%
+addMarkers(lng=-101.42, lat=3.09, popup="The birthplace of R")
+leaflet() %>%
+addTiles() %>%
+addMarkers(lng=101.43, lat=3.25, popup="The birthplace of R")
+leaflet() %>%
+addTiles() %>%
+addMarkers(lng=101.43, lat=3.09, popup="The birthplace of R")
+leaflet() %>%
+addTiles() %>%
+addMarkers(lng=101.42, lat=3.09, popup="The birthplace of R")
+leaflet() %>%
+addTiles() %>%
+addMarkers(lng=101.23, lat=3.09, popup="The birthplace of R")
+leaflet() %>%
+addTiles() %>%
+addMarkers(lng=101.53, lat=3.09, popup="The birthplace of R")
+leaflet() %>%
+addTiles() %>%
+addMarkers(lng=101.67, lat=3.09, popup="The birthplace of R")
+leaflet() %>%
+addTiles() %>%
+addMarkers(lng=101.69, lat=3.093, popup="The birthplace of R")
+leaflet() %>%
+addTiles() %>%
+addMarkers(lng=101.69, lat=3.099, popup="The birthplace of R")
+leaflet() %>%
+addTiles() %>%
+addMarkers(lng=101.705, lat=3.11, popup="The birthplace of R")
+leaflet() %>%
+addTiles() %>%
+addMarkers(lng=101.705, lat=3.19, popup="The birthplace of R")
+leaflet() %>%
+addTiles() %>%
+addMarkers(lng=101.705, lat=3.16, popup="The birthplace of R")
