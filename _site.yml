@@ -20,8 +20,27 @@ navbar:
           href: page_c.html
         - text: "blogdown"
           href: page_d.html
-    - text: "Finance"
-      href: amortisation.html
+        - text: "API"
+          href: page_d.html 
+    - text: "Training"
+      menu:
+        - text: "Investment Operations"
+          href: investment_ops_training.html
+        - text: "---------"
+        - text: "Investment Reports"
+          href: investment_reporting.html
+    - text: "Investment"
+      href: LoanAmortisation.html
+      menu:
+        - text: "Operations"
+        - text: "Reporting"
+          href: amortisation_index.html
+        - text: "Technology"
+        - href: technology_index.html
+        - text: "---------"
+        - text: "Portfolio"
+        - text: "Modelling"
+          href: page_c.html
     - text: "Blog"
       href: blogs.html
    

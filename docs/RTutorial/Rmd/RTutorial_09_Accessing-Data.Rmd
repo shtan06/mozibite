@@ -1,0 +1,110 @@
+---
+title: "Session Nine: Importing and Exporting Data"
+author: "Estimated Duration: 20 minutes"
+output:
+  html_document: 
+    code_folding: show
+    highlight: tango
+    number_sections: no
+    theme: sandstone
+    toc: yes
+    toc_depth: 5
+    toc_float:
+      collapsed: no
+      smooth_scroll: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+<br>
+
+[__<<__ Back to Menu](rtutorial_basic.html)  
+[__>>__ Session Ten](RTutorial_10_dplyr.html)
+
+# {.tabset}
+
+## Excel
+
+### __Excel__
+
+<br>
+
+#### Import Data
+
+(1) Install package 'readxl' if it is not already installed.  
+(2) Go to File > Import Dataset > From Excel  
+
+    The following code is auto-generated. It is the same code to use if you want to type the code directly into the console.  
+
+    `library(readxl)`  
+    `World_Population <- read_excel("~/Documents/REnv/World_Population.xlsx")`  
+    `View(World_Population)`   
+
+(3) Click Import  
+
+    The data is imported and can be found as a data frame object in the Global Environment pane.  
+
+(4) Test  
+
+    Run the below code to find out Malaysia's population in 2020.  
+
+    `malaysia <- World_Population$"2020"[World_Population$Country=="Malaysia"]`  
+    `format(malaysia, digit=8)`  
+
+<br>
+
+#### Export Data
+
+(1) Create a data frame  
+
+    `asia_pop <- World_Population[World_Population$Type=="Asia",c("Country","2020")]`
+
+(2) Install and load writexl package
+
+(3) Export the data frame to the file path
+
+    `write_xlsx(`  
+      `asia_pop,`  
+      `path = "~/Documents/REnv/asia_pop.xlsx",`  
+      `col_names = TRUE,`  
+      `format_headers = TRUE`  
+    `)  `
+
+
+## MySQL
+
+### __MySQL Database__
+
+<br>
+
+#### Import Data
+
+(1) Install and load RMySQL (DBI package will also be installed)
+
+(2) Connect to the database  
+
+    `mydb = dbConnect(MySQL(), user='*****',`  
+      `password='********',`  
+      `dbname='Development'`,`  
+      `host='mysqldb.cjn4dt8lstwn.ap-southeast-1.rds.amazonaws.com')`  
+
+(3) Verify Connection  
+
+    `dbListTables(mydb)` - Database tables  
+    `dbListFields(mydb,'Tablename')` - Field names  
+
+(4) Fetch Data  
+
+    Run Query (result of this query creates a data frame)  
+    `activity_data <- dbGetQuery(mydb,`  
+    `'select Route, count(Route) from ActivityLog group by Route order by route asc')`  
+    `activity_data`  
+
+Note: dbGetResult is the same as the dbSendQuery + dbFetch + dbClearResult procedure  
+
+<br>
+
+#### Insert /Write to MySQL
+
+Use either (1) INSERT SQL statement in dbGetQuery or (2) dbWriteTable()  

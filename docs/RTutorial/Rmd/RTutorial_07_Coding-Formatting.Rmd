@@ -1,0 +1,88 @@
+---
+title: "Session Seven: Coding - Formatting Strings, Numbers and Dates"
+author: "Estimated Duration: 15 minutes"
+output:
+  html_document: 
+    code_folding: show
+    highlight: tango
+    number_sections: no
+    theme: sandstone
+    toc: yes
+    toc_depth: 5
+    toc_float:
+      collapsed: no
+      smooth_scroll: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+<br>
+
+[__<<__ Back to Menu](rtutorial_basic.html)  
+[__>>__ Session Eight](RTutorial_08_Graphs.html)
+
+## Strings
+
+
+Function | Description | Example | Results
+-------- | ----------- | ------- | -------
+c()         | Concatenate      | `c("a","b")` | `r c("a","b")`
+paste()     | Combines strings | `paste(c("re",c("move","fund"), sep="-"))` | `r paste("re",c("move","fund"), sep="-")`
+toString()  | Similar to paste | `toString(c("Hello", "world!"), width=7)`  | `r toString(c("Hello", "world!"), width=7)`
+noquote()   | Suppress quotes when called   | `noquote(c("a","b"))` | `r noquote(c("a","b"))`
+toupper()   | Lower to upper case letters   | `toupper("abc")`      | `r toupper("abc")`
+tolower     | Upper to lower case letters   | `tolower("TwENtY")`   | `r tolower("TwENtY")`
+substr      | Partial string | `substr("Thirteen 13 pages",10,13)` | `r substr("Thirteen 13 pages",10,13)`
+substring   | Partial string | `substring("Thirteen 13 pages",10,13:16)` | `r substring("Thirteen 13 pages",10,13:16)`
+
+<br>
+
+## Numbers
+
+Function | Description | Example | Results
+-------- | ----------- | ------- | -------
+format(x, digits)      | Significant numbers  | `format(123.45678,digits = 5)` | `r format(123.45678,digits = 5)`
+formatC   |||
+prettyNum |||
+sprintf   |||
+
+<br>
+
+## Dates
+
+Example | Results
+------- | -------
+`format(Sys.Date(), '%d %B %Y')` | `r format(Sys.Date(), '%d %B %Y')`
+`format(Sys.time(), '%A %d %B %Y %H:%M')` | `r format(Sys.time(), '%A %d %B %Y %H:%M')`
+
+Code | Description
+---- | -----------
+%a | Abbreviated weekday  
+%A | Full weekday  
+%b | Abbreviated month  
+%B | Full month  
+%c | Locale-specific date and time  
+%d | Decimal date  
+%H | Decimal hours (24 hour)  
+%I | Decimal hours (12 hour)  
+%j | Decimal day of the year  
+%m | Decimal month  
+%M | Decimal minute  
+%p | Locale-specific AM/PM  
+%S | Decimal second  
+%U | Decimal week of the year (starting on Sunday)  
+%w | Decimal Weekday (0=Sunday)  
+%W | Decimal week of the year (starting on Monday)  
+%x | Locale-specific Date  
+%X | Locale-specific Time  
+%y | 2-digit year  
+%Y | 4-digit year  
+%z | Offset from GMT  
+%Z | Time zone (character)  
+
+3 date and time classes: `POSIXct`, `POSIXlt`, `Date`
+Differences are in the way the dates/time are stored.
+
+<br>
+<br>

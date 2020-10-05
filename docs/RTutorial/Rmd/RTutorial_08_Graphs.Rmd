@@ -1,0 +1,116 @@
+---
+title: "Session Eight: Graphs - ggplot2 and plotly"
+author: "Estimated Duration: 40 minutes"
+output:
+  html_document: 
+    code_folding: show
+    highlight: tango
+    number_sections: no
+    theme: sandstone
+    toc: yes
+    toc_depth: 5
+    toc_float:
+      collapsed: no
+      smooth_scroll: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+<br>
+
+[__<<__ Back to Menu](rtutorial_basic.html)  
+[__>>__ Session Nine](RTutorial_09_Accessing-Data.html)
+
+# {.tabset}
+
+## ggplot2
+
+### __ggplot2__
+
+<br>
+
+We shall plot some graphs using the World Population data. Because the data is currently in wide format, it needs to be converted to a long format for us to utilise the capabilities of ggplot2.  
+
+(1) Install and load the reshape2 package.  
+
+(2) Execute the code to re-order the data  
+
+`world_pop <- melt(World_Population)`  
+
+(3) The melt function erroneously included the first column "Index" values so we need to remove the 235 rows by reassigning the variable  
+
+`world_pop <- world_pop[world_pop$Year!="Index",]`  
+
+(4) Change the column names  
+
+`colnames(world_pop) <- c("Country","Region","Year","Population")`
+
+(5) View the data  
+`View(world_pop)'  
+
+<br>
+
+__Plot Basic Graphs__  
+
+`ggplot(world_pop, aes(x=Region, y=Population))+`  
+  `geom_col()`  
+
+#### Histogram
+
+![](/Users/user/Documents/RTutorial/Image/RTutorial_08_ggplot2_histogram.png) 
+<br>
+
+#### Pie Chart
+
+Summarise the data by region  
+`world_pop_region <- aggregate(world_pop_2020$Population, by=list(Region=world_pop_2020$Region), FUN=sum)`  
+`colnames(world_pop_region) <- c("Region","Population")`  
+
+![](/Users/user/Documents/RTutorial/Image/RTutorial_08_ggplot2_pie.png)
+<br>
+<br>
+
+## plotly
+
+### __plotly__
+
+Install package plotly.  
+
+#### Histogram
+
+Filter data by Country = Malaysia
+`world_pop_msia <- world_pop[world_pop$Country=="Malaysia",]` 
+
+Plot the graph  
+`plot_ly(world_pop_msia,x=~Year, y=~Population, type="bar")`  
+
+![](/Users/user/Documents/RTutorial/Image/RTutorial_08_plotly_histogram.png)
+
+#### Pie Chart
+
+Create a new data frame to filter the dataset to year 2020.  
+
+world_pop_2020 <- world_pop[world_pop$Year==2020,]  
+
+Plot the graph
+`fig <- plot_ly(world_pop_2020, labels = ~Region, values = ~Population, type = 'pie')`  
+`fig <- fig %>% layout(title = '2020 World Population by Region',`  
+                      `xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),`  
+                      `yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))`  
+`fig`  
+
+<br>
+
+![](/Users/user/Documents/RTutorial/Image/RTutorial_08_plotly_pie.png)
+
+#### Scatter Plot
+
+Create a new Data Frame  
+`china_india_pop <- world_pop[world_pop$Country=="China" | world_pop$Country=="India",]`  
+
+Plot Graph  
+`plot_ly(data = china_india_pop, x = ~Year, y = ~Population, color = ~Country, type='scatter')`  
+
+![](/Users/user/Documents/RTutorial/Image/RTutorial_08_plotly_scatter.png)
+

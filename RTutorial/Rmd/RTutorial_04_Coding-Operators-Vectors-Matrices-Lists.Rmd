@@ -1,0 +1,365 @@
+---
+title: "Session Four: Coding - Operators, Vectors, Matrices and Lists"
+author: "Estimated Duration: 20 minutes"
+output:
+  html_document: 
+    code_folding: show
+    highlight: tango
+    number_sections: no
+    theme: sandstone
+    toc: yes
+    toc_depth: 5
+    toc_float:
+      collapsed: no
+      smooth_scroll: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+<br>
+
+[__<<__ Back to Menu](rtutorial_basic.html)  
+[__>>__ Session Five](RTutorial_05_Coding-Data-Frames.html)
+
+# {.tabset}
+
+## 1. Operators
+
+### __Part 1: Operators__
+
+<br>
+
+#### Relational Operators
+These boolean expressions make comparisons between values that results in TRUE or FALSE.  
+
+Operator | Description | Example | Results
+-------- | ----------- | ------- | -------
+|>       | Greater than| `5>2`     | `r 5>2`
+<        | Less than   | `"A"<"a"` | `r 8<1`
+==       | Equal to    | `1+2==3` `"X"=="Y"` | `r 1+2==3` `r "X"=="Y"`
+!=       | Not equal to| `10!=20`  | `r 10!=20`
+
+<br>
+
+#### Logical Operators
+
+Operator | Description | Example | Results
+-------- | ----------- | ------- | -------
+&        | And         | `"A"=="B" & 10==10` | `r "A"=="B" & 10==10`
+`|`     | Or          | `"A"=="B" | 10==10` | `r "A"=="B" | 10==10`
+
+<br>
+
+#### Assignment Operators  
+
+Operator | Description | Example
+-------- | ----------- | -------
+<- or =  | Assignment (keyboard shortcut alt+-) | `x <- 20`
+|||`y <- 12+3`
+|||`z <- x+y` 
+|||`colour <- "silver"`
+|||`temp <- c("cold","hot")`  
+|||`mix <- c(z,colour, temp)` 
+<<-      | Global assignment |
+
+__Assigning variables:__  
+  
+  * Can contain letters, numbers, dots and underscore but can't start with a number or a dot followed by a number.  
+  * Can be written as assign("x",20) or assign("x",20,globalenv()) for local and global assignment, but this is rarely used.  
+  * To assign a value and print it all in one line, for example:  
+    + z <- rnorm(5);z  
+    + (z <- rnorm(5))  
+
+<br>
+<br>
+
+## 2. Vectors
+
+### __Part 2: Vectors__
+
+<br>
+
+A vector is a one-dimensional data structure that contains a array of data elements (or components) of the same type.  
+
+<br>
+
+#### Concatenate
+
+Example | Result
+------- | ------
+`c("hello", "world")` | `r c("hello", "world!")`  
+`c(1,2,3,4,5)` | `r c(1,2,3,4,5)`  
+
+<br>
+
+#### Sequence
+
+Example | Result
+------- | ------
+`1:10` | `r 1:10`
+`20:15` | `r 20:15`
+`c(1:5,(5:1)^2)` | `r c(1:5,(5:1)^2)`
+`10+5:10` | `r 10+5:10`
+`1-(1:10)` | `r 1-(1:10)`
+`1:5+1:10` | `r 1:5+1:10`
+`seq(-2,8)` same as -2:8 | `r seq(-2,8)`
+`seq(2,20,2)` | `r seq(2,20,2)`
+`seq.int(2:20, by=2, length.out=8)` | `r seq.int(2:20, by=2, length.out=8)`
+`letters[]` | `r letters[]`
+`LETTERS[3:8]` | `r LETTERS[3:8]`
+
+<br>
+
+#### Repeat
+
+Example | Result
+------- | ------
+`rep("Hello",3)` | `r rep("Hello",3)`
+`rep(1:3,3)` | `r rep(1:3,3)`
+`rep(1:3, each=3)` | `r rep(1:3, each=3)`
+`rep(1:3, times=1:3)` | `r rep(1:3, times=1:3)`
+`rep(1:10, length.out=6)` or rep_len(1:10,6) | `r rep(1:10, length.out=6)`
+
+<br>
+
+#### Lengths 
+Number of elements in the vector. 
+
+Example | Result
+------- | ------
+`length(1:12)` | `r length(1:12)`
+`length(c("A","B","C","D","E","F"))` | `r length(c("A","B","C","D","E","F"))`
+
+<br>
+
+#### Character Size
+Counts the number of characters in each element  
+
+Example | Result
+------- | ------
+`nchar(c("Gold","Silver","Bronze"))` | `r nchar(c("Gold","Silver","Bronze"))`
+`nchar(100*100)` | `r nchar(100*100)`
+
+<br>
+
+#### Names  
+Names each element in the vector
+
+```{r}
+c(Gold=1, Silver=2, Bronze=3, 4, 5)
+```
+<br>
+
+#### Indexing  
+Accesses elements in the vector  
+
+Example | Result
+------- | ------
+`seq(10,100,5)[6]` | `r seq(10,100,5)[6]`
+`x <- c("A","B","C","D","E","F")` | `r x <- c("A","B","C","D","E","F")`
+`x[c(1,3,6)]` include | `r x[c(1,3,6)]`
+`x[c(-1,-5,-6)]` exclude (don't mix +ve and -ve) | `r x[c(-1,-5,-6)]`
+`x[c(T,F,T,F,T,F)]` | `r x[c(T,F,T,F,T,F)]`
+
+<br>
+
+#### Locate Index Position  
+
+Example | Result
+------- | ------
+`y <- c(10:18,15,0,20)` | `r y <- c(10:18,15,0,20)` 
+`which(y==15)` | `r which(y==15)`
+`which(y>14)` | `r which(y>14)`
+`which.min(y)` | `r which.min(y)`
+`which.max(y)` | `r which.max(y)`
+
+```{r}
+which(y==13 | y==17)
+```
+<br>
+
+#### Replace Values
+
+Example  
+`x[c(2,5)]="Z"`
+<br><br>
+
+`replace(x,3,9)` replaces the third element in vector x with the value 9. If vector has only 5 elements for example, then `replace(x,20,11)` creates 14 new "NA" values and the value 11 for the 20th element. Note that this function does not change or replace the original values in variable x.  
+
+<br>
+
+#### Comparing Values and Vectors
+
+Example | Result
+------- | ------
+`identical("book","Book")` | `r identical("book","Book")`
+`identical(2^3,2**3)` | `r identical(2^3,2**3)`
+`identical(a,b,c)` compares all elements in the 3 vectors  
+<br>
+
+`%in%` checks if value exists in a vector  
+```{r}
+13 %in% c(1:10)
+8|12 %in% c(1:10)
+```
+<br>
+
+#### Vector Check
+Function to check is is.vector(y). A single element is also a vector
+
+Example | Result
+------- | ------
+`is.vector(c(1,2,3,4))` | `r is.vector(c(1,2,3,4))`
+
+<br>
+
+#### Vector Function
+vector(mode, length) creates a vector of specified type and length but no values.   
+
+Example | Result
+--------|-------
+`vector("character",5)` | `r vector("character",5)`
+`vector("numeric",5)`   | `r vector("numeric",5)`
+`vector("logical",5)`   | `r vector("logical",5)`
+`s <- vector("numeric",5)` | `r s <- vector("numeric",5)` Example, assign a new vector s
+`s`                     | `r s`
+`s+2`                   | `r s+2`
+`s+c(5,6,7,8,9)`        | `r s+c(5,6,7,8,9)`
+
+<br>
+<br>
+
+## 3. Matrices
+
+### __Part 3: Matrices__
+
+<br>
+
+Matrices are two-dimensional arrays. There are two ways to create a matrix.   
+
+<br>
+
+#### Create a Matrix
+
+**Method 1:**  
+
+a. First, create a vector
+```{r}
+matrix1 <- seq(5,100,5); matrix1
+```
+
+b. Then turn the vector into a 2-D matrix
+```{r}
+dim(matrix1) <- c(5,4);matrix1
+```
+
+Use t() to transpose the matrix
+```{r}
+t(matrix1)
+```
+
+<br>
+
+**Method 2:**
+
+Use the matrix() function
+```{r}
+matrix2 <- matrix(seq(5,100,5), nrow=5); matrix2
+```
+
+or, to fill matrix by row 
+```{r}
+matrix2 <- matrix(seq(5,100,5), nrow=5, byrow=T); matrix2
+```
+
+To give rows and columns a name
+```{r}
+matrix2 <- matrix(seq(5,100,5), nrow=5, byrow=T,
+                  dimnames = list(c("r1","r2","r3","r4","r5"),c("c1","c2","c3","c4")))
+matrix2
+```
+
+<br>
+
+#### Indexing and Attributes
+
+To search by index
+```{r}
+matrix2[2,3]
+matrix2["r1",c("c1","c4")]
+```
+
+Check the class of matrix
+```{r}
+class(matrix2)
+```
+
+To return the number of rows and columns 
+```{r}
+nrow(matrix2)
+ncol(matrix2)
+```
+
+To return the number of components in the matrix
+```{r}
+length(matrix2)
+```
+
+<br>
+
+#### Sum and Mean
+
+To calculate sum and mean of columns and rows
+
+<br>
+
+Example | Result
+------- | ------
+`colSums(matrix2)` | `r colSums(matrix2)`
+`colMeans(matrix2)` | `r colMeans(matrix2)`
+`rowSums(matrix2)` | `r rowSums(matrix2)`
+`rowMeans(matrix2)` | `r rowMeans(matrix2)`
+
+<br>
+<br>
+
+## 4. Lists
+
+### __Part 4: Lists__
+
+A list is a vector that can contain different type of elements. You can name the list during or after construction.
+
+```{r}
+list_a <- list(c(1,2,3,4,5),matrix(1:12,nrow=3),c("a","b","c"));list_a
+names(list_a) <- c("numeric", "matrix", "character");list_a # name the elements
+# During construction:
+  # list_a <- list(
+      # numeric = c(1,2,3,4,5),
+      # matrix = matrix(1:12,nrow=3),
+      # character = c("a","b","c"))
+
+list_a[2] # filter lists using index
+```
+
+<br>
+
+  * Use NULL to remove elements of a list, eg. list_a[3] <- NULL removes the third element.  
+  * To replace existing element: list_a[1] <- list(c(6,7,8,9,10)) replaces the values in the first element.  
+  * Another example is list_a[1] <- list(NULL) to replace existing element to NULL instead of removing it.  
+
+<br>
+<br>
+
+## 5. Object and Variables
+
+### __Part 5: Object and Variable Types__
+
+<br>
+
+Function| Description
+--------| -----------
+`class()` | Checks variable types eg. numeric, character, integer, logical, complex, etc.
+`is.`     | Checks if objects belong to a class, for example, `is.character()`, `is.vector()`, `is.data.frame()`, `is.matrix()`, `is.matrix()`.
+`ls`      | shows complete list of all the functions that match a value in a specified environment. For example, `ls(pattern="^is", baseenv())` shows all functions that start with "is" and `ls(pattern="sum", baseenv())` shows all functions that contain the letters "sum".
+`as.` or `as()` | Changes type of data. For example, `x <- "123.45"`. `as.numeric(x)` or `as(x,"numeric)` displays results in numeric format. Note that the variable x still holds the original value as character.

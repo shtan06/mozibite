@@ -1,0 +1,123 @@
+---
+title: "Session Ten: dplyr"
+author: "Estimated Duration: 30 minutes"
+output:
+  html_document: 
+    code_folding: show
+    highlight: tango
+    number_sections: no
+    theme: sandstone
+    toc: yes
+    toc_depth: 5
+    toc_float:
+      collapsed: no
+      smooth_scroll: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+<br>
+
+[__<<__ Back to Menu](rtutorial_basic.html)  
+[__>>__ Session Eleven](RTutorial_11_RMarkdown.html)
+
+<br>
+
+## Tidyverse
+
+<br>
+
+#### Core Tidyverse  
+Load automatically with library(tiderverse)
+
+Package | Description
+------- | -----------
+ggplot2 | Create graphics
+dplyr   | Data manipulation
+tidyr   | Tidy data
+readr   | Read rectangular data
+purr    | Work with functions and vectors
+tibble  | Enhanced data frame
+stringr | Work with strings
+forcats | Solve problems with factors
+
+<br>
+
+#### Other Tidyverse packages  
+Not loaded automatically with the core Tidyverse  
+
+Package | Description
+------- | -----------
+DBI     | RSQLite, RMyPostgres, etc.
+haven   | For SPSS, Stata and SAS data
+httr    | For web APIs
+readxl  | for Excel spreadsheets
+rvest   | For web scraping
+jsonlite| for JSON
+xml2    | for xml
+lubridate | For dates and date-times
+hms     | For time-of-day values
+blob    | For storing blob (binary) data
+magrittr| Provides the pipe %>% used throughout tidyverse
+glue    | Aternative to paste() to combine data and strings
+
+Source: https://www.tidyverse.org/packages/  
+
+<br>
+
+## dplyr
+
+Commonly used dplyr functions  
+
+Function | Description
+-------- | -----------
+filter   | used to subset a data frame, retaining all rows that satisfy your conditions.
+arrange  | Reorder
+select   | (also rename) Select variables based on their column names
+mutate   | (also transmute) Add new variables to existing variables
+summarise| Condense multiple values to a single value
+sample_n | Take n random samples from the table
+group_by | Groups data
+
+#### Examples  
+
+Using the same data from from previous sections  
+
+```{r}
+library(dplyr)
+df1 <- data.frame(x=letters[1:5], y=rnorm(5), z=runif(5)>0.5, status=factor(c("Open","Closed","Closed","Open","Pending")))
+df1
+```
+
+```{r}
+
+filter(df1, status=="Open", z=="TRUE")
+filter(df1, status=="Open" | z=="TRUE")
+filter(df1, z!="FALSE")
+arrange(df1, desc(y)) # ascending: arrange(df1, y)
+select(df1,status,z,y)
+select(df1, y:status)
+mutate(df1, amount=y^2+10, perc=y^2*100)
+transmute(df1, amount=y^2+10, perc=y^2*100) # use this if you want to only keep the new variables
+summarise(df1, max(y))
+sample_n(df1, 2)
+```
+<br>
+
+__Putting in all together using pipe %>%__  
+
+```{r}
+df1 %>%
+  mutate(df1, amount=y^2+10, perc=y^2*100) %>%
+  summarise(mean=mean(y), total=sum(amount), maximum=max(perc))
+
+df1 %>%
+  select(z, y) %>%
+  group_by(z) %>%
+  summarise(min(y))
+```
+
+<br>
+<br>
+

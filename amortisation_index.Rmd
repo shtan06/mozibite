@@ -1,0 +1,19 @@
+---
+title: "Amortisation"
+output:
+  html_document:
+    theme: sandstone
+    highlight: tango  
+---
+
+<br>
+
+*Last Updated: 5 Oct 2020*
+
+<br>
+
+[Loan Amortisation](LoanAmortisation.html)  
+
+[Deriving Financial Formulas using Geometric Series](GeometricSum.html)  
+
+[Bond Amortisation - Effective Interest Method](BondAmortisation.html)  
