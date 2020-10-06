@@ -16,4 +16,4 @@ output:
 
 [Deriving Financial Formulas using Geometric Series](GeometricSum.html)  
 
-[Bond Amortisation - Effective Interest Method](BondAmortisation.html)  
+[Bond Amortisation - Constant Yield Method](BondAmortisation.html)  

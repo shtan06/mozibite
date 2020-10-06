@@ -35,8 +35,10 @@ navbar:
         - text: "Operations"
         - text: "Reporting"
           href: amortisation_index.html
+        - text: "Outsourcing"
+          href: outsourcing_index.html  
         - text: "Technology"
-        - href: technology_index.html
+          href: technology_index.html
         - text: "---------"
         - text: "Portfolio"
         - text: "Modelling"
