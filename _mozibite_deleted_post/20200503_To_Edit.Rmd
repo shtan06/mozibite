@@ -1,0 +1,19 @@
+---
+title: "More about R"
+output: html_document
+---
+
+My Personal Experience
+My first experience with programming was Apple's BASIC. At University, we had to learn Oracle (a bit heavy for an economics student). For much of my career, I had access to a lot of data. To make a long story short, I started with Microsoft Excel and Access. Along the way, some automation with Macros. As I got better at managing data and writing small programs, I moved on to bigger things - SQL Server database management, writing SQL codes and procedures and Visual Basic .NET. Then came the dot com era with markup languages and more recently PHP, JavaScript, Python and R. However, my specialisation and favourite, is not in programming, but in report writing and business intelligence - SAP Crystal Reports, Cognos and Power BI. So, if your background or goal lean more towards data management and analysis, R or Python would be an obvious choice. Some say R is easier and some say Python, but it does not matter. Learn both if you can. For me, R is a lot easier. 
+
+
+Starting out in computer programming can be a pain, especially as you progress from learning by examples from books and the internet to starting out your own project. You spend a lot of time on the internet, searching for a solution to make your program work the way you want it to, and in the worst case, only to conclude that you need to start all over again. Yes, this may have taken away precious time but it makes you a better programmer.
+
+Next, what tolearn in R.
+
+
+https://data-flair.training/blogs/r-vs-python/
+(https://websitesetup.org/web-design-software/)
+https://www.fullstackacademy.com/blog/nine-best-programming-languages-to-learn
+
+Thes are my suggestions on what to learn in R. RMarkdown, packages, etc.

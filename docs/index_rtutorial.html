@@ -11,35 +11,19 @@
 
 
 
-<title>Creating a MySQL DB Instance on AWS RDS</title>
+<title>Beginning R</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/sandstone.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
-<style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
-}
-</script>
 
 
 
@@ -104,33 +88,33 @@ summary {
 <style type="text/css">
 /* padding for bootstrap navbar */
 body {
-  padding-top: 51px;
+  padding-top: 61px;
   padding-bottom: 40px;
 }
 /* offset scroll position for anchor links (for fixed navbar)  */
 .section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
+  padding-top: 66px;
+  margin-top: -66px;
 }
 .section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
+  padding-top: 66px;
+  margin-top: -66px;
 }
 .section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
+  padding-top: 66px;
+  margin-top: -66px;
 }
 .section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
+  padding-top: 66px;
+  margin-top: -66px;
 }
 .section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
+  padding-top: 66px;
+  margin-top: -66px;
 }
 .section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
+  padding-top: 66px;
+  margin-top: -66px;
 }
 .dropdown-submenu {
   position: relative;
@@ -366,13 +350,28 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Creating a MySQL DB Instance on AWS RDS</h1>
+<h1 class="title toc-ignore">Beginning R</h1>
 
 </div>
 
 
-<p>Amazon Relational Database Service’s user guide <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_GettingStarted.CreatingConnecting.MySQL.html">Creating a MySQL DB Instance and Connecting to a Database on a MySQL DB Instance</a> provides a very clear instruction for first time users.</p>
-<p>The setup is simple when configured using the <em>Easy Create</em>. The only issue I encountered after the database had been successfully created was that the MySQL Workbench installed on my machine could not connect to the new database. It was resolved after making changes to the inbound rules (in security group rules) to <strong>Type = All Traffic</strong> and <strong>Source = My IP</strong>. I’m not sure if this opens up any security risk but for now, since access is restricted to my IP only and the database is a test database, it should be fine.</p>
+<p><br></p>
+<p><em>Last Updated: 5 Oct 2020</em></p>
+<p><br></p>
+<p><a href="RTutorial_01_Introduction-to-R.html">Session 1 - Introduction to R</a></p>
+<p><a href="RTutorial_02_The-RStudio-Environment.html">Session 2 - The R Environment</a></p>
+<p><a href="RTutorial_03_Coding-Arithmetic-Operators.html">Session 3 - Coding - Arithmetic Operators</a></p>
+<p><a href="RTutorial_04_Coding-Operators-Vectors-Matrices-Lists.html">Session 4 - Coding - Operators, Vectors, Matrices and Lists</a></p>
+<p><a href="RTutorial_05_Coding-Data-Frames.html">Session 5 - Coding - Data Frames</a></p>
+<p><a href="RTutorial_06_Coding-Loops-and-Functions.html">Session 6 - Coding - Loops and Functions</a></p>
+<p><a href="RTutorial_07_Coding-Formatting.html">Session 7 - Coding - Formatting</a></p>
+<p><a href="RTutorial_08_Graphs.html">Session 8 - Graphs</a></p>
+<p><a href="RTutorial_09_Accessing-Data.html">Session 9 - Accessing Data</a></p>
+<p><a href="RTutorial_10_dplyr.html">Session 10 - dplyr</a></p>
+<p><a href="RTutorial_11_RMarkdown.html">Session 11 - R Markdown</a></p>
+<p><a href="RTutorial_12_Flexdashboard-htmlwidgets-Shiny.html">Session 12 - Flex Dashboard, htmlwidgets and Shiny</a></p>
+<p><a href="RTutorial_13_RMarkdown-Websites-and-Github.html">Session 13 - R Markdown Websites and Github</a></p>
+<p><a href="RTutorial_14_Creating-Packages.html">Session 14 - Creating Packages</a></p>
 
 
 

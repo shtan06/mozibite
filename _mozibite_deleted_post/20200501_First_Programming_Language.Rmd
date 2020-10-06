@@ -1,0 +1,29 @@
+---
+title: "Which Programming Language Should You Learn First?"
+date: "1 May 2020"
+output: html_document
+---
+
+We all have at one point been overwhelmed by which language to learn first. Whether you are planning to enrol for a course or self-learn, I'm sure you would have done quite a bit of research and finally narrowed down your options. They say choose the one that's easy and fits your needs.
+
+Yay, you finally found one to start, great! Bought a book (or watched YouTube if you are a millenial)...then realised you couldn't get past the fifth chapter. Tried again and the brain processes yet another rejection. Back to Google search again and more confusion. Tried another language. Didn't get very far with that new book either. And another. You pause, then tell yourself your brain needs to reset and that you'll come back to learn later. Worse, you started having doubts and convince yourself that your programming isn't your cup of tea.
+
+If this sounds familiar, then it is likely that your mindset is failing you. For those who just want to give up completely, hang on; just because you are clueless does not mean your brain is not wired for programming. Revisit your objectives, commitment and learning approach. Compare this to learning a new foreign language - you memorise more than you can retain, your mind gets overloaded when you try too hard to make sense of sentence structures that don't translate nicely into English and then there's the odd grammar rules. Soon enough, you end up bored and frustrated. To be effective, sometimes you have to let go of the textbook approach. Keep listening and speaking even if you may not immediately know the words or phrases. It's the process of getting the feel of the language and picking up a few words gradually along the way. Do this often and you will naturally be at ease with the language, making learning a lot easier.
+
+So, in programming, it's fine if you don't fully understand what is going on initially. What you absorb blankly will soon be understood through practice and more practice. Having objectives and methods that work best for you help to keep you interested.
+
+* Create your own examples or find them on the internet.  
+* Get creative, be flexible and solve problems as you work through examples.  
+* Think of a "pet project", break it down into micro projects and work your way up.  
+* Look for ways to code more effectively.
+
+There are many other things you can do, but the most important thing is as long as you "speak the language" often and challenge yourself to dive deeper each time, everything will start to flow.
+
+So, stop looking for another programming language that you can "connect" with. Stick to one of the choices you have made. It's highly unlikely that you have chosen an obsolete or the more complex low level language, so you are safe. Along your journey, you will briefly cross path with other languages and you may find yourself learning them with relative ease. As you become more proficient in a few languages, you will be in a good position to decide which programming language you want to master.
+
+
+Recommended Links:
+
+Here's a good read about becoming a great self-learner [here](https://examinedexistence.com/how-to-become-a-great-self-learner/).
+
+If you want to push through a tough subject, read these study tips [here](https://www.connectionsacademy.com/support/resources/article/5-study-tips-to-making-tough-subjects-easier-to-learn).

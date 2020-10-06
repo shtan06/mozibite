@@ -1,0 +1,28 @@
+---
+title: "Learning R - Where Do You Begin?"
+output: html_document
+---
+
+There are many books available for beginners. I started with these:
+
+![](Images/Book_Learning_R.png) ![](Images/Book_Statistical_Analysis_R.png) 
+
+By the way, you don't need to know Statistics to be able to use R.
+
+For other great recommendations, check out these links:  
+[Top 20 R Programming Books To Teach Yourself From Scratch](https://whatpixel.com/best-r-programming-books/)     
+[Authored by RStudio](https://rstudio.com/resources/books/)
+
+This is a highly recommended book: [R for Data Science](https://r4ds.had.co.nz/).
+
+__Learning from Videos and Books__  
+There are lots of good tutorials on YouTube too. I won't put any links here because there are so many that I find very informative and easy to look up. For me, I'm old school so I usually start with books. Compared to learning mostly from videos only where I tend to lose pace and flow, I feel that the contents you find in books are more structured to provide a better foundation for beginners to follow.
+
+My personal favourite training resource is from RStudio and contributers/developers like r-bloggers. You can use these as your starting point or as a reference guide later.  
+[RStudio Training Resources](https://rstudio.com/resources/training/)  
+[RStudio Education](https://education.rstudio.com/)  
+[r-bloggers - Learn R](https://www.r-bloggers.com/how-to-learn-r-2/)  
+
+If you find it difficult to follow, especially if you do not have the basic foundation in programming, I recommend that you get a book that suits your level of IT proficiency first.
+
+

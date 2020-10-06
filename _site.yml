@@ -11,7 +11,7 @@ navbar:
       menu:
         - text: "Basic"
         - text: "Beginning R"
-          href: rtutorial_basic.html
+          href: index_rtutorial.html
         - text: "Statistics"
           href: page_b.html
         - text: "---------"
@@ -34,17 +34,17 @@ navbar:
       menu:
         - text: "Operations"
         - text: "Reporting"
-          href: amortisation_index.html
+          href: index_reporting.html
         - text: "Outsourcing"
-          href: outsourcing_index.html  
+          href: index_outsourcing.html  
         - text: "Technology"
-          href: technology_index.html
+          href: index_technology.html
         - text: "---------"
         - text: "Portfolio"
         - text: "Modelling"
           href: page_c.html
     - text: "Blog"
-      href: blogs.html
+      href: index_blogs.html
    
       
       

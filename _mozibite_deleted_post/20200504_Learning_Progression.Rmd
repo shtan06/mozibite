@@ -1,0 +1,52 @@
+---
+title: "Learning Progression for Beginners"
+output: html_document
+---
+Estimated timeline and milestones to be a confident R programmer: __4 months__  
+Month 1: Whether you are self-studying or taking a 4-week course, aim to....
+Month 2: Practice the entire flow using your exmaple project, specialise in say graphs. build as many possible. explore more packages. you will learn more through your own practice
+Month 3: Learn to use r markdown, web site, etc. read more books and videos 
+Month 4: Real-world data and perform complex analysis. 
+
+
+
+* __2 months__ - you will know everything below but only touching the surface
+* __+2 months__ - more practise and accomplished a number of mini projects
+* __+2 months__ - apply real-world data and perform complex analysis
+hands-on
+*Note that the timeline is much longer than a typical course duration. Even if you took a 4-week course, you still need at least 2-3 months of daily practice to be an efficient R programmer. Depending on the level of complexity (of data, analysis and presentation) you want to achieve, 6 months is a realistic timeline. Also note that this timeline does not apply to experienced data analysts coming from another programming language background.*
+
+__In the Beginning__  
+You will learn about (not an exhaustive list):
+
+* Installation
+* RStudio environment
+* Simple maths and statictics calculation
+* Functions
+* Packages
+* Vectors, Matrices, Data Frames
+* Importing data
+* Cleaning data
+* Graphs
+* Creating your own packages
+
+__A Little More Advanced__  
+But you are not an R data expert yet  
+
+* Loops
+* Debugging
+* Object-oriented programming
+* More statistical functions
+* Modeling
+
+__Learn Some of These Packages__  
+Takes you to another level  
+
+* Data import (eg. DBI, RMySQL, RSQLite, readxl, httr)
+* Data manipulation (dplyr, tidyr, stringr, lubridate, DataExplorer, inspectdf)
+* Tables (DT, kable/kableExtra)
+* Charts (ggplot2, ggthemes, ggvis, plotly)
+* R Markdown
+* Web Presentation (Shiny, flexdashboard)
+* Website Builder (blogdown)
+* Authoring Books (bookdown)

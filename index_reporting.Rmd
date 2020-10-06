@@ -1,0 +1,25 @@
+---
+title: "Reporting"
+output:
+  html_document:
+    theme: sandstone
+    highlight: tango  
+---
+
+<br>
+
+*Last Updated: 5 Oct 2020*
+
+<br>
+
+__Amortisation__
+
+[Loan Amortisation](LoanAmortisation.html)  
+
+[Deriving Financial Formulas using Geometric Series](GeometricSum.html)  
+
+[Bond Amortisation - Constant Yield Method](BondAmortisation.html)  
+
+<br>
+
+__Core Reports__

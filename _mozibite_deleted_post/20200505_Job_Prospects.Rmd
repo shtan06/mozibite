@@ -1,0 +1,5 @@
+---
+title: "R Job Prospects"
+output: html_document
+---
+I have seen people asking if they can apply for jobs after completing a short course in R. From what I see in the job market, it really depends on your background and the role you are applying for. If you have possess other skills and qualifications, for example, actuarial science or quantitative analyst, you have an advantage. If, however, you are hoping to land a role purely doing R programming without any prior experience in the industry the company is in or 
