@@ -20,6 +20,8 @@ __Amortisation__
 
 [Bond Amortisation - Constant Yield Method](BondAmortisation.html)  
 
+[Bond Amortisation - Examples with R](BondAmortisation_Code.html) 
+
 <br>
 
 __Core Reports__
