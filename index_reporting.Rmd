@@ -24,4 +24,7 @@ __Amortisation__
 
 <br>
 
-__Core Reports__
+__Core Reports__  
+
+[How accurate is the YIELD Function in Excel?](BondYieldExcel.html)  
+
