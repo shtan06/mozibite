@@ -3,9 +3,10 @@ title: "Blogs"
 output:
   html_document:
     theme: sandstone
-    highlight: tango  
+    highlight: tango
+    includes:
+      after-Body: Untitled-3.html
 ---
-
 <br>
 
 [Get flask Up and Running with Anaconda Navigator](Blog_2020-06-05_flask_install_anaconda.html)  

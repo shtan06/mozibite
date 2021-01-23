@@ -1,6 +1,45 @@
 ---
 title: "Tiny Bites"
-output: html_document
+output:
+  html_document:
+    theme: sandstone
+    highlight: tango
 ---
 
-Welcome to mozibite. This is a simple website that brings concise information to non-technical readers who are beginning their journey into data exploration.
+<!--Make Github private after uploading  -->
+
+```{css, echo=FALSE}
+
+body {
+  background-image: url('pexels-negative-space-34153.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+h1.title {
+  font-size: 23px;
+  font-family: Monospace;
+  color: white;
+}
+h3 {
+  font-size: 17px;
+  font-family: Monospace;
+  font-stretch: Extended;
+  line-height: 1.6em;
+  color: white;
+}
+
+p {
+  position: absolute;
+  bottom: 9%;
+  left: 30px;
+  font-size: 14px;
+  line-height: 1.6em;
+}
+
+```
+
+### <br> Welcome to mozibite. This is a simple website that brings concise information to non-technical readers who are beginning their journey into financial data exploration.
+
+**Copyright © Stan 2021**  
+Website designed with R Markdown. Images by Negative Space from [Pexels](www.pexels.com).

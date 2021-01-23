@@ -11,16 +11,18 @@
 
 
 
-<title>This site is designed to take you into the world of investment technology, operations, reporting and analytics. Presentation slides and tutorial materials are available in the Resources page. I will also share random stuff on my Mozibyte Blog that I think would be useful information for you.</title>
+<title>Creating a MySQL DB Instance on AWS RDS</title>
 
 <script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/sandstone.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
@@ -33,6 +35,21 @@
   ul.task-list{list-style: none;}
     </style>
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
 
 
 
@@ -98,33 +115,33 @@ summary {
 <style type="text/css">
 /* padding for bootstrap navbar */
 body {
-  padding-top: 61px;
+  padding-top: 51px;
   padding-bottom: 40px;
 }
 /* offset scroll position for anchor links (for fixed navbar)  */
 .section h1 {
-  padding-top: 66px;
-  margin-top: -66px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 .section h2 {
-  padding-top: 66px;
-  margin-top: -66px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 .section h3 {
-  padding-top: 66px;
-  margin-top: -66px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 .section h4 {
-  padding-top: 66px;
-  margin-top: -66px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 .section h5 {
-  padding-top: 66px;
-  margin-top: -66px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 .section h6 {
-  padding-top: 66px;
-  margin-top: -66px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 .dropdown-submenu {
   position: relative;
@@ -274,7 +291,7 @@ $(document).ready(function () {
   <a href="about.html">About</a>
 </li>
 <li>
-  <a href="myprofile/myprofile_redirect.html">My Profile</a>
+  <a href="myprofile/myprofile.html">My Profile</a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -363,41 +380,13 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">This site is designed to take you into the world of investment technology, operations, reporting and analytics. Presentation slides and tutorial materials are available in the <em>Resources</em> page. I will also share random stuff on my <em>Mozibyte Blog</em> that I think would be useful information for you.</h1>
+<h1 class="title toc-ignore">Creating a MySQL DB Instance on AWS RDS</h1>
 
 </div>
 
 
-<style type="text/css">
-
-body {
-  background-image: url('pexels-negative-space-169573.jpg');
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-
-h1.title {
-  font-size: 18px;
-  font-family: Monospace;
-  font-stretch: Extended;
-  color: white;
-  background-color: grey;
-  padding: 30px;
-  line-height: 1.25em;
-  text-align: justify;
-}
-
-p {
-  position: absolute;
-  bottom: 9%;
-  left: 30px;
-  font-size: 14px;
-  line-height: 1.6em;
-}
-
-</style>
-<p><strong>Copyright © Stan 2021</strong><br />
-Website designed with R Markdown. Images by Negative Space from <a href="www.pexels.com">Pexels</a>.</p>
+<p>Amazon Relational Database Service’s user guide <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_GettingStarted.CreatingConnecting.MySQL.html">Creating a MySQL DB Instance and Connecting to a Database on a MySQL DB Instance</a> provides a very clear instruction for first time users.</p>
+<p>The setup is simple when configured using the <em>Easy Create</em>. The only issue I encountered after the database had been successfully created was that the MySQL Workbench installed on my machine could not connect to the new database. It was resolved after making changes to the inbound rules (in security group rules) to <strong>Type = All Traffic</strong> and <strong>Source = My IP</strong>. I’m not sure if this opens up any security risk but for now, since access is restricted to my IP only and the database is a test database, it should be fine.</p>
 
 
 

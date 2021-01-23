@@ -1,21 +1,39 @@
 ---
-title: "About"
-output: html_document
+title: "This site is designed to take you into the world of investment technology, operations, reporting and analytics. Presentation slides and tutorial materials are available in the *Resources* page. I will also share random stuff on my *Mozibyte Blog* that I think would be useful information for you."
+output:
+  html_document:
+    theme: sandstone
+    highlight: tango
 ---
 
-This site is built entirely on R Markdown site generator in its simplest form with minimum coding, packages and themes. To learn more about R Markdown, go to: <https://rmarkdown.rstudio.com/index.html> or read the book, R Markdown: The Definitive Guide online <https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html>.
+```{css, echo=FALSE}
 
-I will share random stuff on this blog that I think would be useful information for you. I have not opened the site to comments yet. You can contact me at shtan06@gmail.com.
+body {
+  background-image: url('pexels-negative-space-169573.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
 
- *"...break (the projects) down to their simplest form and then just make marginal improvements along the way to improve my odds of achieving them."*
- - an inspiring advise from Stephen Duneier who gave a talk on TEDx on how to achieve your goals.
- 
- <br>
- <br>
- <br>
- 
-*__Update (Sep 2020)__*
- 
-<br>
- 
-I am shutting down inv-ops.com, a site dedicated to investment operations. All contents have been removed. A few selected contents will be gradually posted back on this site temporarily until my new site is up. For now, my profile, tutorial materials, training and write-ups are all packed randomly into this space, so my apologies if you find this site incomplete or even disorganised at this time. 
+h1.title {
+  font-size: 18px;
+  font-family: Monospace;
+  font-stretch: Extended;
+  color: white;
+  background-color: grey;
+  padding: 30px;
+  line-height: 1.25em;
+  text-align: justify;
+}
+
+p {
+  position: absolute;
+  bottom: 9%;
+  left: 30px;
+  font-size: 14px;
+  line-height: 1.6em;
+}
+
+```
+
+**Copyright © Stan 2021**  
+Website designed with R Markdown. Images by Negative Space from [Pexels](www.pexels.com).
