@@ -8,7 +8,7 @@ navbar:
     - text: "About"
       href: about.html
     - text: "My Profile"
-      href: myprofile/myprofile_redirect.html
+      href: myprofile_redirect.html
     - text: "R Tutorial"
       menu:
         - text: "Basic"
