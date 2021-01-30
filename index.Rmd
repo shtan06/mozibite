@@ -1,12 +1,13 @@
 ---
-title: "Tiny Bites"
+title: "thinkData"
 output:
   html_document:
     theme: sandstone
     highlight: tango
 ---
-
+<!-- TO DO -->
 <!--Make Github private after uploading  -->
+<!-- Add Back to Home page in My Profile page -->
 
 ```{css, echo=FALSE}
 
@@ -40,7 +41,7 @@ p {
 
 ```
 
-### <br> Welcome to mozibite. This is a simple website that brings concise information to non-technical readers who are beginning their journey into financial data exploration.
+### <br> Welcome. This is a simple site that brings concise information to non-technical readers who are beginning their journey into financial data exploration.
 
-**Copyright © Stan 2021**  
+**Copyright © Chen Xihui 2021**  
 Website designed with R Markdown. Images by Negative Space from [Pexels](www.pexels.com).

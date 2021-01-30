@@ -1,5 +1,5 @@
 ---
-title: "This site is designed to take you into the world of investment technology, operations, reporting and analytics. Presentation slides and tutorial materials are available in the *Resources* page. I will also share random stuff on my *Mozibyte Blog* that I think would be useful information for you."
+title: "For investment professionals, this site is designed to take you into the world of investment technology, operations, reporting and analytics. Presentation slides and tutorial materials are available in the *Resources* page (if you have permission to access)."
 output:
   html_document:
     theme: sandstone
@@ -31,10 +31,10 @@ p {
   left: 30px;
   font-size: 14px;
   line-height: 1.6em;
-  color: rgb(232,232,232);
+  color: rgb(232, 232, 232);
 }
 
 ```
 
-**Copyright © Stan 2021**  
+**Copyright © Chen Xihui 2021**  
 Website designed with R Markdown. Images by Negative Space from [Pexels](www.pexels.com).

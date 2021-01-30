@@ -1,55 +1,11 @@
-name: "Tiny Bites Blog"
+name: "think"
 output_dir: docs
 navbar:
-  title: "mozibite"
+  title: "About"
   left:
-    - text: "Home"
+    - text: "think | Data"
       href: index.html
-    - text: "About"
+    - text: "think | Advanced"
       href: about.html
-    - text: "My Profile"
-      href: myprofile/myprofile.html
-    - text: "R Tutorial"
-      menu:
-        - text: "Basic"
-        - text: "Beginning R"
-          href: index_rtutorial.html
-        - text: "Statistics"
-          href: page_b.html
-        - text: "---------"
-        - text: "Intermediate"
-        - text: "plotly"
-          href: page_c.html
-        - text: "blogdown"
-          href: page_d.html
-        - text: "API"
-          href: page_d.html 
-    - text: "Training"
-      menu:
-        - text: "Investment Operations"
-          href: investment_ops_training.html
-        - text: "---------"
-        - text: "Investment Reports"
-          href: investment_reporting.html
-    - text: "Investment"
-      href: LoanAmortisation.html
-      menu:
-        - text: "Operations"
-        - text: "Reporting"
-          href: index_reporting.html
-        - text: "Outsourcing"
-          href: index_outsourcing.html  
-        - text: "Technology"
-          href: index_technology.html
-        - text: "---------"
-        - text: "Portfolio"
-        - text: "Modelling"
-          href: page_c.html
     - text: "Blog"
-      href: index_blogs.html
-   
-      
-      
-  right:
-    - icon: fa-github
-      href: https://github.com/shtan06/mozibite.git
+      href: https://middle-office.netlify.app/
